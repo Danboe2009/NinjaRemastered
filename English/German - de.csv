@@ -1,0 +1,107 @@
+Game.Coins,Münzen:
+Game.Continue,Weiter
+Game.Diamonds,Diamanten:
+Game.Level,Stufe:
+Game.Lose,Du hast verloren!
+Game.Menu,Menü
+Game.MoveBot,Verschieben
+Game.MoveTop,Tippen Sie hier
+Game.Pause,Das Spiel pausiert ist
+Game.Score,Ergebnis:
+Game.Skill,Skill:
+Game.Tutorial11,"Willkommen Sie Hallo, bei Ninja"
+Game.Tutorial12,Kriegsführung. Ich bin Sensai Lien.
+Game.Tutorial13,Beginnen Sie Ihr Training!
+Game.Tutorial21,Den Bildschirm von Blättern
+Game.Tutorial22,auf der rechten Seite drücken oder
+Game.Tutorial23,linken Seite des Bildschirms.
+Game.Tutorial31,Dies ist der Ninja-Baum.
+Game.Tutorial32,Der Oni versuchen
+Game.Tutorial33,Zerstöre sie.
+Game.Tutorial41,Durch die Einstellung verteidigen
+Game.Tutorial42,Ninjas! Tippen Sie auf die Ninja
+Game.Tutorial43,"Symbol, um ein Ninja bereitstellen."
+Game.Tutorial51,"Niederlage Oni, Münzen zu gewinnen!"
+Game.Tutorial52,Tippen Sie auf die Münze zu
+Game.Tutorial53,Sammeln Sie diese.
+Game.Tutorial61,Zerstören Sie die Oni-Portal
+Game.Tutorial62,um das Level zu beenden.
+Game.Tutorial71,Komplette Ebenen
+Game.Tutorial72,die verlorenen zu sichern
+Game.Tutorial73,Diamanten.
+Game.Tutorial81,Diamanten können verwendet werden
+Game.Tutorial82,neu kaufen
+Game.Tutorial83,Einheiten.
+Game.Tutorial91,Verdienen Sie ein neues
+Game.Tutorial92,Einheit mit Diamant.
+Game.Upgrade,Upgrade
+Game.Win,Sie haben gewonnen!
+Menu.Achievements,Leistungen
+Menu.Back,Zurück
+Menu.Cleared,Spiel gelöscht
+Menu.Connected,In Verbindung bleiben!
+Menu.Credits,Impressum
+Menu.EraseBot,Spieldaten
+Menu.EraseTop,Alle löschen
+Menu.Games,Mehr Spiele
+Menu.Leaderboards,Ranglisten
+Menu.Loading,Laden
+Menu.LogoBot,Angriff der Oni
+Menu.LogoTop,Ninja Warfare:
+Menu.No,Nein
+Menu.Options,Optionen
+Menu.Play,Spielen
+Menu.QuitBot,Um zu verlassen
+Menu.QuitTop,Drücken Sie zurück
+Menu.Reset,Daten zurücksetzen
+Menu.ResetBot,Sicher?
+Menu.ResetTop,Bist du
+Menu.SoundOff,Sound Off
+Menu.SoundOn,Sound On
+Menu.Upgrades,Upgrades
+Menu.Yes,Ja
+Results.BonusScore,Bonus Punkte:
+Results.BonusSkill,Bonus-Fähigkeit:
+Results.EveryBot,Verdienen fünf Diamanten
+Results.EveryTop,Eine Wiederholung zu teilen
+Results.RateBot,Verdienen Sie 10 Diamanten
+Results.RateTop,Bewerten Sie das Spiel
+Results.RateUs,Bewerten Sie uns
+Results.Thanks,Vielen Dank
+Results.TotalScore,Gesamtwertung:
+Results.TotalSkill,Gesamt Skill:
+Upgrades.Attack,Angriff:
+Upgrades.Buy,Kaufen
+Upgrades.ChainSickle,Kette und Sichel
+Upgrades.CoinMiner,M�nze Bergmann
+Upgrades.DiamondsNeeded,Diamanten freischalten musste.
+Upgrades.HandClaws,Hand Claws
+Upgrades.HP,HP:
+Upgrades.Locked,Gesperrt
+Upgrades.LongBow,Langbogen
+Upgrades.MaxLevel,Max Level erreicht
+Upgrades.NinjaTree,Ninja-Pagode
+Upgrades.NotEnoughDiamonds,Nicht genug Diamanten
+Upgrades.NotEnoughSkill,Nicht genug Spieler
+Upgrades.Nunchuck,Nonne Chuck
+Upgrades.OutOf,Außer Betrieb
+Upgrades.PickSomething,Wählen Sie etwas
+Upgrades.Refinement,Verfeinerung-Upgrade
+Upgrades.Refining,M�nze Refining
+Upgrades.Sai,Falsch
+Upgrades.SkillNeeded,Skill benötigt:
+Upgrades.SpeedUpgrade,Geschwindigkeit-Upgrade
+Upgrades.StoneWall,Steinmauer
+Upgrades.Sword,Schwert 
+Upgrades.Throwing,Wurfstern
+Upgrades.Tutorial11,Dies ist die Upgrades
+Upgrades.Tutorial12,Bildschirm
+Upgrades.Tutorial21,Upgrade jetzt dein Schwert
+Upgrades.Tutorial22,Ninja durch die Auswahl der
+Upgrades.Tutorial23,Taste und tippen
+Upgrades.Tutorial24,'Upgrade'.
+Upgrades.Tutorial31,Groß! Nun ist genug
+Upgrades.Tutorial32,Lehre für mich heute.
+Upgrades.Tutorial33,Viel Glück da draußen.
+Upgrades.Unlocked,Entsperrt
+Upgrades.WoodStaff,Holzstab

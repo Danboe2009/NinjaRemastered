@@ -1,0 +1,3 @@
+Portal rises from the ground at the beginning of the level.  Camera pans to this happening and then back to your pagoda(tree).
+
+Once the first 5 frames complete, then frames 6 through 10 will repeat.  Possibly those 5 frames will be timed so that an enemy is released on frame 10?
