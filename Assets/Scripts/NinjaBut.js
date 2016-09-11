@@ -1,5 +1,6 @@
 #pragma strict
 var Cost : float;
+var CoolDown : float;
 var Hero : GameObject;
 var Tex : SpriteRenderer;
 var Textures : Sprite[];
@@ -53,6 +54,7 @@ function Start ()
 	Unit6LVL = PlayerPrefs.GetInt("Unit6Level");
 	Unit7LVL = PlayerPrefs.GetInt("Unit7Level");
 	Unit8LVL = PlayerPrefs.GetInt("Unit8Level");
+	CoolDown = PlayerPrefs.GetInt("CoolDown");
 }
 
 function Update () 
@@ -360,8 +362,8 @@ function Update ()
 				if(Variables.Coins >= Cost)
 				{
 					Tutorial.Ninja = true;
-					Cool = 10;
-					TCool = 10;
+					Cool = CoolDown;
+					TCool = CoolDown;
 					if(Variables.Tutorial)
 					{
 						this.tag = "Tutorial";
@@ -384,8 +386,8 @@ function Update ()
 			{
 				if(Variables.Coins > Cost)
 				{
-					Cool = 10;
-					TCool = 10;
+					Cool = CoolDown;
+					TCool = CoolDown;
 					PlayerPrefs.SetInt("Nunchuckman",PlayerPrefs.GetInt("Nunchuckman") + 1);
 					Variables.Coins = Variables.Coins - Cost;
 					var Temp2 = new Instantiate(Hero,Vector3(-47,2.5,-09),Quaternion.Euler(90,0,0));
@@ -404,8 +406,8 @@ function Update ()
 			{
 				if(Variables.Coins > Cost)
 				{
-					Cool = 10;
-					TCool = 10;
+					Cool = CoolDown;
+					TCool = CoolDown;
 					PlayerPrefs.SetInt("Throwingman",PlayerPrefs.GetInt("Throwingman") + 1);
 					Variables.Coins = Variables.Coins - Cost;
 					var Temp3 = new Instantiate(Hero,Vector3(-47,2.5,-09),Quaternion.Euler(90,0,0));
@@ -424,8 +426,8 @@ function Update ()
 			{
 				if(Variables.Coins > Cost)
 				{
-					Cool = 10;
-					TCool = 10;
+					Cool = CoolDown;
+					TCool = CoolDown;
 					PlayerPrefs.SetInt("Longbowman",PlayerPrefs.GetInt("Longbowman") + 1);
 					Variables.Coins = Variables.Coins - Cost;
 					var Temp4 = new Instantiate(Hero,Vector3(-47,2.5,-09),Quaternion.Euler(90,0,0));
@@ -444,8 +446,8 @@ function Update ()
 			{
 				if(Variables.Coins > Cost)
 				{
-					Cool = 10;
-					TCool = 10;
+					Cool = CoolDown;
+					TCool = CoolDown;
 					PlayerPrefs.SetInt("Woodman",PlayerPrefs.GetInt("Woodman") + 1);
 					Variables.Coins = Variables.Coins - Cost;
 					var Temp5 = new Instantiate(Hero,Vector3(-47,2.5,-09),Quaternion.Euler(90,0,0));
@@ -464,8 +466,8 @@ function Update ()
 			{
 				if(Variables.Coins > Cost)
 				{
-					Cool = 10;
-					TCool = 10;
+					Cool = CoolDown;
+					TCool = CoolDown;
 					PlayerPrefs.SetInt("Chainman",PlayerPrefs.GetInt("Chainman") + 1);
 					Variables.Coins = Variables.Coins - Cost;
 					var Temp6 = new Instantiate(Hero,Vector3(-47,2.5,-09),Quaternion.Euler(90,0,0));
@@ -484,8 +486,8 @@ function Update ()
 			{
 				if(Variables.Coins > Cost)
 				{
-					Cool = 10;
-					TCool = 10;
+					Cool = CoolDown;
+					TCool = CoolDown;
 					PlayerPrefs.SetInt("Saiman",PlayerPrefs.GetInt("Saiman") + 1);
 					Variables.Coins = Variables.Coins - Cost;
 					var Temp7 = new Instantiate(Hero,Vector3(-47,2.5,-09),Quaternion.Euler(90,0,0));
@@ -504,8 +506,8 @@ function Update ()
 			{
 				if(Variables.Coins > Cost)
 				{
-					Cool = 10;
-					TCool = 10;
+					Cool = CoolDown;
+					TCool = CoolDown;
 					PlayerPrefs.SetInt("Handman",PlayerPrefs.GetInt("Handman") + 1);
 					Variables.Coins = Variables.Coins - Cost;
 					var Temp8 = new Instantiate(Hero,Vector3(-47,2.5,-09),Quaternion.Euler(90,0,0));
@@ -528,8 +530,8 @@ function Update ()
 		{
 			if(Variables.Coins >= Cost)
 			{
-				Cool = 10;
-				TCool = 10;
+				Cool = CoolDown;
+				TCool = CoolDown;
 				PlayerPrefs.SetInt("Swordsman",PlayerPrefs.GetInt("Swordsman") + 1);
 				Variables.Coins = Variables.Coins - Cost;
 				var ATemp1 = new Instantiate(Hero,Vector3(-47,2.5,-09),Quaternion.Euler(90,0,0));
@@ -548,8 +550,8 @@ function Update ()
 		{
 			if(Variables.Coins >= Cost)
 			{
-				Cool = 10;
-				TCool = 10;
+				Cool = CoolDown;
+				TCool = CoolDown;
 				PlayerPrefs.SetInt("Nunchuckman",PlayerPrefs.GetInt("Nunchuckman") + 1);
 				Variables.Coins = Variables.Coins - Cost;
 				var ATemp2 = new Instantiate(Hero,Vector3(-47,2.5,-09),Quaternion.Euler(90,0,0));
@@ -568,8 +570,8 @@ function Update ()
 		{
 			if(Variables.Coins >= Cost)
 			{
-				Cool = 10;
-				TCool = 10;
+				Cool = CoolDown;
+				TCool = CoolDown;
 				PlayerPrefs.SetInt("Throwingman",PlayerPrefs.GetInt("Throwingman") + 1);
 				Variables.Coins = Variables.Coins - Cost;
 				var ATemp3 = new Instantiate(Hero,Vector3(-47,2.5,-09),Quaternion.Euler(90,0,0));
@@ -588,8 +590,8 @@ function Update ()
 		{
 			if(Variables.Coins >= Cost)
 			{
-				Cool = 10;
-				TCool = 10;
+				Cool = CoolDown;
+				TCool = CoolDown;
 				PlayerPrefs.SetInt("Longbowman",PlayerPrefs.GetInt("Longbowman") + 1);
 				Variables.Coins = Variables.Coins - Cost;
 				var ATemp4 = new Instantiate(Hero,Vector3(-47,2.5,-09),Quaternion.Euler(90,0,0));
@@ -608,8 +610,8 @@ function Update ()
 		{
 			if(Variables.Coins >= Cost)
 			{
-				Cool = 10;
-				TCool = 10;
+				Cool = CoolDown;
+				TCool = CoolDown;
 				PlayerPrefs.SetInt("Woodman",PlayerPrefs.GetInt("Woodman") + 1);
 				Variables.Coins = Variables.Coins - Cost;
 				var ATemp5 = new Instantiate(Hero,Vector3(-47,2.5,-09),Quaternion.Euler(90,0,0));
@@ -628,8 +630,8 @@ function Update ()
 		{
 			if(Variables.Coins >= Cost)
 			{
-				Cool = 10;
-				TCool = 10;
+				Cool = CoolDown;
+				TCool = CoolDown;
 				PlayerPrefs.SetInt("Chainman",PlayerPrefs.GetInt("Chainman") + 1);
 				Variables.Coins = Variables.Coins - Cost;
 				var ATemp6 = new Instantiate(Hero,Vector3(-47,2.5,-09),Quaternion.Euler(90,0,0));
@@ -648,8 +650,8 @@ function Update ()
 		{
 			if(Variables.Coins >= Cost)
 			{
-				Cool = 10;
-				TCool = 10;
+				Cool = CoolDown;
+				TCool = CoolDown;
 				PlayerPrefs.SetInt("Saiman",PlayerPrefs.GetInt("Saiman") + 1);
 				Variables.Coins = Variables.Coins - Cost;
 				var ATemp7 = new Instantiate(Hero,Vector3(-47,2.5,-09),Quaternion.Euler(90,0,0));
@@ -668,8 +670,8 @@ function Update ()
 		{
 			if(Variables.Coins >= Cost)
 			{
-				Cool = 10;
-				TCool = 10;
+				Cool = CoolDown;
+				TCool = CoolDown;
 				PlayerPrefs.SetInt("Handman",PlayerPrefs.GetInt("Handman") + 1);
 				Variables.Coins = Variables.Coins - Cost;
 				var ATemp8 = new Instantiate(Hero,Vector3(-47,2.5,-09),Quaternion.Euler(90,0,0));

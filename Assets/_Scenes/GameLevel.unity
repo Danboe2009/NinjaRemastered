@@ -585,6 +585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cost: 275
+  CoolDown: 10
   Hero: {fileID: 100000, guid: ebac26e54fae7e5489bc77a6dbd292e8, type: 2}
   Tex: {fileID: 125850899}
   Textures:
@@ -1114,7 +1115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OniG: {fileID: 100000, guid: 6aba41d3dca39e8488a30ed8ac66dc84, type: 2}
-  debu: 0
+  debu: 1
 --- !u!4 &591409644
 Transform:
   m_ObjectHideFlags: 0
@@ -1339,6 +1340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cost: 50
+  CoolDown: 10
   Hero: {fileID: 100000, guid: ebac26e54fae7e5489bc77a6dbd292e8, type: 2}
   Tex: {fileID: 756824426}
   Textures:
@@ -1742,6 +1744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cost: 550
+  CoolDown: 10
   Hero: {fileID: 100000, guid: ebac26e54fae7e5489bc77a6dbd292e8, type: 2}
   Tex: {fileID: 947766816}
   Textures:
@@ -1988,6 +1991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cost: 100
+  CoolDown: 10
   Hero: {fileID: 100000, guid: ebac26e54fae7e5489bc77a6dbd292e8, type: 2}
   Tex: {fileID: 1037095989}
   Textures:
@@ -2371,6 +2375,7 @@ GameObject:
   - 120: {fileID: 1136791588}
   - 65: {fileID: 1136791587}
   - 212: {fileID: 1136791583}
+  - 95: {fileID: 1136791584}
   m_Layer: 0
   m_Name: PinkCastle
   m_TagString: Oni
@@ -2411,6 +2416,23 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!95 &1136791584
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1136791582}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eb27bd041dfc9e14c8a644b220541f01, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!4 &1136791586
 Transform:
   m_ObjectHideFlags: 0
@@ -3026,6 +3048,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cost: 175
+  CoolDown: 10
   Hero: {fileID: 100000, guid: ebac26e54fae7e5489bc77a6dbd292e8, type: 2}
   Tex: {fileID: 1429934221}
   Textures:
@@ -3759,6 +3782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cost: 25
+  CoolDown: 7.5
   Hero: {fileID: 100000, guid: ebac26e54fae7e5489bc77a6dbd292e8, type: 2}
   Tex: {fileID: 1756235901}
   Textures:
@@ -4366,6 +4390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cost: 750
+  CoolDown: 10
   Hero: {fileID: 100000, guid: ebac26e54fae7e5489bc77a6dbd292e8, type: 2}
   Tex: {fileID: 1961232115}
   Textures:
@@ -4606,6 +4631,7 @@ GameObject:
   - 120: {fileID: 2030202838}
   - 65: {fileID: 2030202837}
   - 212: {fileID: 2030202833}
+  - 95: {fileID: 2030202834}
   m_Layer: 0
   m_Name: BlueCastle
   m_TagString: Ninja
@@ -4646,6 +4672,23 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!95 &2030202834
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2030202832}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 80c2512498b758043888189edcac591c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!4 &2030202836
 Transform:
   m_ObjectHideFlags: 0
@@ -4771,6 +4814,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cost: 400
+  CoolDown: 10
   Hero: {fileID: 100000, guid: ebac26e54fae7e5489bc77a6dbd292e8, type: 2}
   Tex: {fileID: 2043997704}
   Textures:

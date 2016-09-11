@@ -5,6 +5,8 @@ var SSprite : SpriteRenderer;
 //var WSprite : tk2dSprite;
 //var GSprite : tk2dSprite;
 var WWords : TextMesh;
+var One : TextMesh;
+var Two : TextMesh; 
 
 static var Selected : int;
 static var BuyDiam : boolean;
@@ -74,6 +76,8 @@ function Start ()
 		NAro.color = Color(1,1,1,0);
 		UAro.color = Color(1,1,1,0);
 		Back.transform.position = Vector3(0,6,0);
+		One.text = "";
+		Two.text = "";
 		Tutorial();
 	}
 	if(PlayerPrefs.GetInt("UTutorial") == 1 || PlayerPrefs.GetInt("Level") != 2)
@@ -82,6 +86,8 @@ function Start ()
 		UAro.color = Color(1,1,1,0);
 		BSprite.color = Color(1,1,1,0);
 		SSprite.color = Color(1,1,1,0);
+		One.text = "";
+		Two.text = "";
 		WWords.text = "";
 	}
 	
@@ -104,6 +110,7 @@ function Start ()
 	Slot7 = PlayerPrefs.GetInt("Slot7");
 	Slot8 = PlayerPrefs.GetInt("Slot8");
 	Stone = PlayerPrefs.GetInt("StoneLevel");
+	Ston.text = "Debug.";
 }
 
 function Update () 
@@ -469,53 +476,46 @@ function Update ()
 	}
 	if(Selected == 9)
 	{
-//		if(PlayerPrefs.GetInt("PagodaLevel") < 20)
-//		{
-//			Line1.text = "Hp: " + (100 + ((PlayerPrefs.GetInt("PagodaLevel") - 1) * 100)) + " -> " +  (100 + ((PlayerPrefs.GetInt("PagodaLevel")) * 100));
-//			Line2.text = "Hp Upgrade";
-//			Line3.text = "Skill: ";
-//			Line4.text = "Skill Needed: ";
-//			Skil.text = PlayerPrefs.GetInt("TotalSkill").ToString();
-//			SkilN.text = (1000 * (PlayerPrefs.GetInt("PagodaLevel") + 1)).ToString();
-//			if(PlayerPrefs.GetInt("TotalSkill") >= (1000 * (PlayerPrefs.GetInt("PagodaLevel") + 1)))
-//			{
-//				Skil.color = DGree;
-//			}
-//			else
-//			{
-//				Skil.color = Color.red;
-//			}
-//		}
-//		if(PlayerPrefs.GetInt("PagodaLevel") >= 20)
-//		{
-			Line1.text = UpgradesLanguage.thisLanguageManager.GetTextValue ("Upgrades.OutOf");
-			Line2.text = "";
+		if(PlayerPrefs.GetInt("Unit8Level") < 20)
+		{
+			Line1.text = UpgradesLanguage.thisLanguageManager.GetTextValue("Upgrades.Locked");
+			Line2.text = "Fully upgrade Hand Claw Ninja";
 			Line3.text = "";
 			Line4.text = "";
-			Skil.text = "";
-			Skil.color = Color.black;
-			SkilN.text = "";
-//  	}
+		}
+		else
+		{
+			if(PlayerPrefs.GetInt("CoolDownLevel") < 5)
+			{
+				Line1.text = "Hp: " + (100 + ((PlayerPrefs.GetInt("CoolDownLevel") - 1) * 100)) + " -> " +  (100 + ((PlayerPrefs.GetInt("CoolDownLevel")) * 100));
+				Line2.text = "Hp Upgrade";
+				Line3.text = "Skill: ";
+				Line4.text = "Skill Needed: ";
+				Skil.text = PlayerPrefs.GetInt("TotalSkill").ToString();
+				SkilN.text = (1000 * (PlayerPrefs.GetInt("CoolDownLevel") + 1)).ToString();
+				if(PlayerPrefs.GetInt("TotalSkill") >= (1000 * (PlayerPrefs.GetInt("CoolDownLevel") + 1)))
+				{
+					Skil.color = DGree;
+				}
+				else
+				{
+					Skil.color = Color.red;
+				}
+			}
+			if(PlayerPrefs.GetInt("CoolDownLevel") >= 5)
+			{
+				Line1.text = UpgradesLanguage.thisLanguageManager.GetTextValue ("Upgrades.MaxLevel");
+				Line2.text = "";
+				Line3.text = "";
+				Line4.text = "";
+				Skil.text = "";
+				Skil.color = Color.black;
+				SkilN.text = "";
+	 		}
+ 		}
 	}
 	if(Selected == 10)
 	{
-//		if(PlayerPrefs.GetInt("StoneLevel") >= 1 && PlayerPrefs.GetInt("StoneLevel") < 20)
-//		{
-//			Line1.text = "Hp: " + (100 + ((PlayerPrefs.GetInt("StoneLevel") - 1) * 100)) + " -> " +  (100 + ((PlayerPrefs.GetInt("StoneLevel")) * 100));
-//			Line2.text = "Hp Upgrade";
-//			Line3.text = "Skill: ";
-//			Line4.text = "Skill Needed: ";
-//			Skil.text = PlayerPrefs.GetInt("TotalSkill").ToString();
-//			SkilN.text = (-725+(725 * (PlayerPrefs.GetInt("StoneLevel") + 1))).ToString();
-//			if(PlayerPrefs.GetInt("TotalSkill") >= (-725+(725 * (PlayerPrefs.GetInt("StoneLevel") + 1))))
-//			{
-//				Skil.color = DGree;
-//			}
-//			else
-//			{
-//				Skil.color = Color.red;
-//			}
-//		}
 		if(PlayerPrefs.GetInt("StoneLevel") == 1)
 		{
 			Line1.text = UpgradesLanguage.thisLanguageManager.GetTextValue("Upgrades.Unlocked");
@@ -626,8 +626,14 @@ function Levels()
 	{
 		Ston.text = UpgradesLanguage.thisLanguageManager.GetTextValue("Upgrades.Unlocked");
 	}
-	Pago.text = "Level: " + PlayerPrefs.GetInt("PagodaLevel").ToString() + "/20";
-	Ston.text = "Level: " + PlayerPrefs.GetInt("StoneLevel").ToString() + "/20";
+	if(PlayerPrefs.GetInt("Unit8Level") < 20)
+	{
+		Pago.text = UpgradesLanguage.thisLanguageManager.GetTextValue("Upgrades.Locked");
+	}
+	if(PlayerPrefs.GetInt("Unit8Level") >= 20)
+	{
+		Pago.text = UpgradesLanguage.thisLanguageManager.GetTextValue("Game.Level") + " " + PlayerPrefs.GetInt("CoolDownLevel").ToString() + "/5";
+	}
 	Mine.text = UpgradesLanguage.thisLanguageManager.GetTextValue("Game.Level") + " " + PlayerPrefs.GetInt("MinerLevel").ToString() + "/40";
 	Coin.text = UpgradesLanguage.thisLanguageManager.GetTextValue("Game.Level") + " " + PlayerPrefs.GetInt("CoinsLevel").ToString() + "/40"; 
 }
@@ -642,12 +648,16 @@ function Tutorial()
 	Back.transform.position = Vector3(12,6,9);
 	NAro.color = Color(1,1,1,1);
 	UAro.color = Color(1,1,1,1);
+	One.text = "1";
+	Two.text = "2";
 	while(PlayerPrefs.GetInt("Unit1Level") != 2)
 	{
 		yield WaitForSeconds(0.1);
 	}
 	NAro.color = Color(1,1,1,0);
 	UAro.color = Color(1,1,1,0);
+	One.text = "";
+	Two.text = "";
 	yield WaitForSeconds(3);
 	Back.transform.position = Vector3(0,6,0);
 	WWords.text = UpgradesLanguage.thisLanguageManager.GetTextValue("Upgrades.Tutorial31") + "\n" + UpgradesLanguage.thisLanguageManager.GetTextValue("Upgrades.Tutorial32") + "\n" + UpgradesLanguage.thisLanguageManager.GetTextValue("Upgrades.Tutorial33");

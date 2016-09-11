@@ -643,60 +643,39 @@ function Update ()
        				}
        				if(Upgrades.Selected == 9)
        				{
-       					ClearScreen(UpgradesLanguage.thisLanguageManager.GetTextValue ("Upgrades.OutOf"));
-//       					var Cost9 = (1000 * (PlayerPrefs.GetInt("PagodaLevel") + 1));
-//	       				if(Skill < Cost9)
-//	       				{
-//	       					if(Sound)
-//				       		{
-//				       			AudioSource.PlayClipAtPoint(No, Camera.main.transform.position);
-//				       		}
-//				       		ClearScreen("Not enough Skill");
-//	       				}
-//	       				if(Skill >= Cost9 && PlayerPrefs.GetInt("PagodaLevel") < 20)
-//	       				{
-//	       					Buy(Cost9);
-//	       					Skill = Skill - Cost9;
-//	       					PlayerPrefs.SetInt("PagodaLevel",PlayerPrefs.GetInt("PagodaLevel")+1);
-//	       				}
-//	       				if(PlayerPrefs.GetInt("PagodaLevel") > 19)
-//	       				{
-//	       					if(Sound)
-//				       		{
-//				       			AudioSource.PlayClipAtPoint(No, Camera.main.transform.position);
-//				       		}
-//				       		ClearScreen("Max Level");
-//	       				}
+						if(PlayerPrefs.GetInt("Unit8Level") < 20)
+						{
+							ClearScreen(UpgradesLanguage.thisLanguageManager.GetTextValue("Upgrades.Locked"));
+						}
+						else
+						{
+	       					var Cost9 = (1000 * (PlayerPrefs.GetInt("CoolDownLevel") + 1));
+		       				if(Skill < Cost9)
+		       				{
+		       					if(Sound)
+					       		{
+					       			AudioSource.PlayClipAtPoint(No, Camera.main.transform.position);
+					       		}
+					       		ClearScreen("Not enough Skill");
+		       				}
+		       				if(Skill >= Cost9 && PlayerPrefs.GetInt("CoolDownLevel") < 20)
+		       				{
+		       					Buy(Cost9);
+		       					Skill = Skill - Cost9;
+		       					PlayerPrefs.SetInt("CoolDownLevel",PlayerPrefs.GetInt("CoolDownLevel")+1);
+		       				}
+		       				if(PlayerPrefs.GetInt("CoolDownLevel") > 19)
+		       				{
+		       					if(Sound)
+					       		{
+					       			AudioSource.PlayClipAtPoint(No, Camera.main.transform.position);
+					       		}
+					       		ClearScreen(UpgradesLanguage.thisLanguageManager.GetTextValue("Upgrades.MaxLevel"));
+		       				}
+       					}
        				}
        				if(Upgrades.Selected == 10)
        				{
-//       					if(PlayerPrefs.GetInt("StoneLevel") >= 1)
-//						{
-//	       					var Cost10 = (-725+(725 * (PlayerPrefs.GetInt("StoneLevel") + 1)));
-//		       				if(Skill < Cost10)
-//		       				{
-//		       					if(Sound)
-//					       		{
-//					       			AudioSource.PlayClipAtPoint(No, Camera.main.transform.position);
-//					       		}
-//					       		ClearScreen("Not enough Skill");
-//		       				}
-//		       				if(Skill >= Cost10 && PlayerPrefs.GetInt("StoneLevel") < 20)
-//		       				{
-//		       					Buy(Cost10);
-//		       					Skill = Skill - Cost10;
-//		       					PlayerPrefs.SetInt("StoneLevel",PlayerPrefs.GetInt("StoneLevel")+1);
-//		       				}
-//		       				if(PlayerPrefs.GetInt("StoneLevel") > 19)
-//		       				{
-//		       					if(Sound)
-//					       		{
-//					       			AudioSource.PlayClipAtPoint(No, Camera.main.transform.position);
-//					       		}
-//					       		ClearScreen("Max Level");
-//		       				}
-//	       				}
-	
 						if(PlayerPrefs.GetInt("StoneLevel") == 1)
 						{
 							ClearScreen(UpgradesLanguage.thisLanguageManager.GetTextValue("Upgrades.Unlocked"));
@@ -1234,11 +1213,11 @@ function Update ()
 		}
 		if(Upgrades.Selected == 9)
 		{
-			if(PlayerPrefs.GetInt("PagodaLevel") < 20)
+			if(PlayerPrefs.GetInt("CoolDownLevel") < 20)
 			{
     			TextM.text = UpgradesLanguage.thisLanguageManager.GetTextValue ("Game.Upgrade");
     		}
-    		if(PlayerPrefs.GetInt("PagodaLevel") > 19)
+    		if(PlayerPrefs.GetInt("CoolDownLevel") > 19)
  			{
     			TextM.text = UpgradesLanguage.thisLanguageManager.GetTextValue ("Game.Upgrade");
      		}

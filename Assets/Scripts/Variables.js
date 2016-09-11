@@ -238,9 +238,9 @@ static function NinjaUnits()
 	{
 		PlayerPrefs.SetInt("MinerLevel",1);
 	}
-	if(!PlayerPrefs.HasKey("PagodaLevel"))
+	if(!PlayerPrefs.HasKey("CoolDownLevel"))
 	{
-		PlayerPrefs.SetInt("PagodaLevel",1);
+		PlayerPrefs.SetInt("CoolDownLevel",1);
 	}
 	if(!PlayerPrefs.HasKey("StoneLevel"))
 	{
@@ -253,6 +253,10 @@ static function NinjaUnits()
 	if(!PlayerPrefs.HasKey("CoinsLevel"))
 	{
 		PlayerPrefs.SetInt("CoinsLevel",1);
+	}
+	if(!PlayerPrefs.HasKey("CoolDown"))
+	{
+		PlayerPrefs.SetInt("CoolDown",10);
 	}
 }
 
