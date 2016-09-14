@@ -487,13 +487,13 @@ function Update ()
 		{
 			if(PlayerPrefs.GetInt("CoolDownLevel") < 5)
 			{
-				Line1.text = "Hp: " + (100 + ((PlayerPrefs.GetInt("CoolDownLevel") - 1) * 100)) + " -> " +  (100 + ((PlayerPrefs.GetInt("CoolDownLevel")) * 100));
-				Line2.text = "Hp Upgrade";
-				Line3.text = "Skill: ";
-				Line4.text = "Skill Needed: ";
-				Skil.text = PlayerPrefs.GetInt("TotalSkill").ToString();
-				SkilN.text = (1000 * (PlayerPrefs.GetInt("CoolDownLevel") + 1)).ToString();
-				if(PlayerPrefs.GetInt("TotalSkill") >= (1000 * (PlayerPrefs.GetInt("CoolDownLevel") + 1)))
+				Line1.text = "Cooldown time: " + (10 - PlayerPrefs.GetInt("CoolDownLevel"));
+				Line2.text = "100 " + UpgradesLanguage.thisLanguageManager.GetTextValue ("Upgrades.DiamondsNeeded");
+				Line3.text = UpgradesLanguage.thisLanguageManager.GetTextValue ("Game.Diamonds");
+				Line4.text = "";
+				Skil.text = PlayerPrefs.GetInt("Diamonds").ToString();
+				SkilN.text = "";
+				if(PlayerPrefs.GetInt("Diamonds") >= 100)
 				{
 					Skil.color = DGree;
 				}

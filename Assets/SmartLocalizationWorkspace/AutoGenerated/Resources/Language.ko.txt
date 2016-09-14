@@ -408,7 +408,7 @@
 		<value>최대 수준에 도달</value>
 	</data>
 	<data name="Upgrades.NinjaTree" xml:space="preserve">
-		<value>닌자 탑</value>
+		<value>재사용 대기 시간</value>
 	</data>
 	<data name="Upgrades.NotEnoughDiamonds" xml:space="preserve">
 		<value>충분하지 다이아몬드</value>

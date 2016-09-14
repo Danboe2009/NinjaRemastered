@@ -240,7 +240,7 @@ static function NinjaUnits()
 	}
 	if(!PlayerPrefs.HasKey("CoolDownLevel"))
 	{
-		PlayerPrefs.SetInt("CoolDownLevel",1);
+		PlayerPrefs.SetInt("CoolDownLevel",0);
 	}
 	if(!PlayerPrefs.HasKey("StoneLevel"))
 	{

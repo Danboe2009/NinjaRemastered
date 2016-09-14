@@ -649,22 +649,22 @@ function Update ()
 						}
 						else
 						{
-	       					var Cost9 = (1000 * (PlayerPrefs.GetInt("CoolDownLevel") + 1));
-		       				if(Skill < Cost9)
-		       				{
-		       					if(Sound)
+	       					var DCost9 = 100;
+       						if(Diamo < DCost9)
+       						{
+       							if(Sound)
 					       		{
 					       			AudioSource.PlayClipAtPoint(No, Camera.main.transform.position);
 					       		}
-					       		ClearScreen("Not enough Skill");
-		       				}
-		       				if(Skill >= Cost9 && PlayerPrefs.GetInt("CoolDownLevel") < 20)
-		       				{
-		       					Buy(Cost9);
-		       					Skill = Skill - Cost9;
+					       		ClearScreen(UpgradesLanguage.thisLanguageManager.GetTextValue("Upgrades.NotEnoughDiamonds"));
+       						}
+       						if(Diamo >= DCost9)
+       						{
+       							Diamo = Diamo - DCost9;
+       							PlayerPrefs.SetInt("Diamonds", (PlayerPrefs.GetInt("Diamonds") - DCost8));
 		       					PlayerPrefs.SetInt("CoolDownLevel",PlayerPrefs.GetInt("CoolDownLevel")+1);
-		       				}
-		       				if(PlayerPrefs.GetInt("CoolDownLevel") > 19)
+       						}
+		       				if(PlayerPrefs.GetInt("CoolDownLevel") > 4)
 		       				{
 		       					if(Sound)
 					       		{

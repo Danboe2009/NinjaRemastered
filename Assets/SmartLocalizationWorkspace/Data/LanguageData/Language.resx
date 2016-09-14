@@ -408,7 +408,7 @@
 		<value>Max Level Reached</value>
 	</data>
 	<data name="Upgrades.NinjaTree" xml:space="preserve">
-		<value>Ninja Pagoda</value>
+		<value>Cooldown</value>
 	</data>
 	<data name="Upgrades.NotEnoughDiamonds" xml:space="preserve">
 		<value>Not Enough Diamonds</value>

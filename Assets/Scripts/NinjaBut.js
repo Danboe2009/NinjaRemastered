@@ -54,7 +54,7 @@ function Start ()
 	Unit6LVL = PlayerPrefs.GetInt("Unit6Level");
 	Unit7LVL = PlayerPrefs.GetInt("Unit7Level");
 	Unit8LVL = PlayerPrefs.GetInt("Unit8Level");
-	CoolDown = PlayerPrefs.GetInt("CoolDown");
+	CoolDown = (10 - PlayerPrefs.GetInt("CoolDownLevel"));
 }
 
 function Update () 

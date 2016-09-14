@@ -409,7 +409,7 @@
 		<value>Nivel máximo alcanzado</value>
 	</data>
 	<data name="Upgrades.NinjaTree" xml:space="preserve">
-		<value>Pagoda de Ninja</value>
+		<value>Enfriarse</value>
 	</data>
 	<data name="Upgrades.NotEnoughDiamonds" xml:space="preserve">
 		<value>No hay suficientes diamantes</value>
