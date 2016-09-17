@@ -546,7 +546,7 @@ function Update ()
 	}
 	if(Selected == 11)
 	{
-		if(PlayerPrefs.GetInt("MinerLevel") < 40)
+		if(PlayerPrefs.GetInt("MinerLevel") < 60)
 		{
 			Line1.text = ""; //"Speed: " + (10+ ((PlayerPrefs.GetInt("StoneLevel") - 1) * 10)) + " -> " +  (10 + ((PlayerPrefs.GetInt("StoneLevel")) * 10));
 			Line2.text = UpgradesLanguage.thisLanguageManager.GetTextValue ("Upgrades.SpeedUpgrade");
@@ -563,7 +563,7 @@ function Update ()
 				Skil.color = Color.red;
 			}
 		}
-		if(PlayerPrefs.GetInt("MinerLevel") >= 40)
+		if(PlayerPrefs.GetInt("MinerLevel") >= 60)
 		{
 			Line1.text = UpgradesLanguage.thisLanguageManager.GetTextValue ("Upgrades.MaxLevel");
 			Line2.text = "";
@@ -576,7 +576,7 @@ function Update ()
 	}
 	if(Selected == 12)
 	{
-		if(PlayerPrefs.GetInt("CoinsLevel") < 40)
+		if(PlayerPrefs.GetInt("CoinsLevel") < 60)
 		{
 			Line1.text = ""; //"Speed: " + (10+ ((PlayerPrefs.GetInt("StoneLevel") - 1) * 10)) + " -> " +  (10 + ((PlayerPrefs.GetInt("StoneLevel")) * 10));
 			Line2.text = UpgradesLanguage.thisLanguageManager.GetTextValue ("Upgrades.Refinement");
@@ -593,7 +593,7 @@ function Update ()
 				Skil.color = Color.red;
 			}
 		}
-		if(PlayerPrefs.GetInt("CoinsLevel") >= 40)
+		if(PlayerPrefs.GetInt("CoinsLevel") >= 60)
 		{
 			Line1.text = UpgradesLanguage.thisLanguageManager.GetTextValue ("Upgrades.MaxLevel");
 			Line2.text = "";
