@@ -712,13 +712,13 @@ function Update ()
 					    	}
 					    	ClearScreen(UpgradesLanguage.thisLanguageManager.GetTextValue("Upgrades.NotEnoughSkill"));
 		       			}
-		       			if(Skill >= Cost11 && PlayerPrefs.GetInt("MinerLevel") < 60)
+		       			if(Skill >= Cost11 && PlayerPrefs.GetInt("MinerLevel") < 75)
 		       			{
 		       				Buy(Cost11);
 		       				Skill = Skill - Cost11;
 		       				PlayerPrefs.SetInt("MinerLevel",PlayerPrefs.GetInt("MinerLevel")+1);
 		       			}
-		       			if(PlayerPrefs.GetInt("MinerLevel") > 59)
+		       			if(PlayerPrefs.GetInt("MinerLevel") > 74)
 	       				{
 	       					if(Sound)
 				       		{
@@ -738,13 +738,13 @@ function Update ()
 				       		}
 				       		ClearScreen(UpgradesLanguage.thisLanguageManager.GetTextValue("Upgrades.NotEnoughSkill"));
 	       				}
-	       				if(Skill >= Cost12 && PlayerPrefs.GetInt("CoinsLevel") < 60)
+	       				if(Skill >= Cost12 && PlayerPrefs.GetInt("CoinsLevel") < 75)
 		       			{
 		       				Buy(Cost12);
 		       				Skill = Skill - Cost12;
 		       				PlayerPrefs.SetInt("CoinsLevel",PlayerPrefs.GetInt("CoinsLevel")+1);
 		       			}
-		       			if(PlayerPrefs.GetInt("CoinsLevel") > 59)
+		       			if(PlayerPrefs.GetInt("CoinsLevel") > 74)
 	       				{
 	       					if(Sound)
 				       		{
@@ -1243,23 +1243,23 @@ function Update ()
 		}
 		if(Upgrades.Selected == 11)
 		{
-			if(PlayerPrefs.GetInt("MinerLevel") < 40)
+			if(PlayerPrefs.GetInt("MinerLevel") < 75)
 			{
     			
     			TextM.text = UpgradesLanguage.thisLanguageManager.GetTextValue ("Game.Upgrade");
     		}
-    		if(PlayerPrefs.GetInt("MinerLevel") > 39)
+    		if(PlayerPrefs.GetInt("MinerLevel") > 74)
 			{
     			TextM.text = UpgradesLanguage.thisLanguageManager.GetTextValue ("Game.Upgrade");
     		}
 		}
 		if(Upgrades.Selected == 12)
 		{
-			if(PlayerPrefs.GetInt("CoinsLevel") < 40)
+			if(PlayerPrefs.GetInt("CoinsLevel") < 75)
 			{
     			TextM.text = UpgradesLanguage.thisLanguageManager.GetTextValue ("Game.Upgrade");
     		}
-    		if(PlayerPrefs.GetInt("CoinsLevel") > 39)
+    		if(PlayerPrefs.GetInt("CoinsLevel") > 74)
 			{
     			TextM.text = UpgradesLanguage.thisLanguageManager.GetTextValue ("Game.Upgrade");
     		}

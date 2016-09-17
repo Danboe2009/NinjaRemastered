@@ -237,10 +237,10 @@ function Start ()
 		{
 			anim.Play("HandClawWalkThree");
 		}
-		Health = 1795 + ((Unit8LVL - 1) * 50);
-		TotHealth = 1795 + ((Unit8LVL - 1) * 50);
-		MinAtt = 910 + ((Unit8LVL - 1) * 16);
-		MaxAtt = 920 + ((Unit8LVL - 1) * 16);
+		Health = 2600 + ((Unit8LVL - 1) * 50);
+		TotHealth = 2600 + ((Unit8LVL - 1) * 50);
+		MinAtt = 1170 + ((Unit8LVL - 1) * 16);
+		MaxAtt = 1180 + ((Unit8LVL - 1) * 16);
 		SpeAtt = 0.5;
 		Speed = 7;
 	}

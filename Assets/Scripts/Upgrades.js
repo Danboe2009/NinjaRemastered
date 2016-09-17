@@ -431,8 +431,8 @@ function Update ()
 	{
 		if(PlayerPrefs.GetInt("Slot8") == 1 && PlayerPrefs.GetInt("Unit8Level") < 20)
 		{
-			Line1.text = UpgradesLanguage.thisLanguageManager.GetTextValue ("Upgrades.HP") + " " + (1785 + ((PlayerPrefs.GetInt("Unit8Level") - 1) * 50)) + " -> " +  (1785 + ((PlayerPrefs.GetInt("Unit8Level")) * 50));
-			Line2.text = UpgradesLanguage.thisLanguageManager.GetTextValue ("Upgrades.Attack") + " " + (920 + ((PlayerPrefs.GetInt("Unit8Level") - 1) * 16)) + " -> " + (920 + ((PlayerPrefs.GetInt("Unit8Level")) * 16));
+			Line1.text = UpgradesLanguage.thisLanguageManager.GetTextValue ("Upgrades.HP") + " " + (2600 + ((PlayerPrefs.GetInt("Unit8Level") - 1) * 50)) + " -> " +  (2600 + ((PlayerPrefs.GetInt("Unit8Level")) * 50));
+			Line2.text = UpgradesLanguage.thisLanguageManager.GetTextValue ("Upgrades.Attack") + " " + (1170 + ((PlayerPrefs.GetInt("Unit8Level") - 1) * 16)) + " -> " + (1180 + ((PlayerPrefs.GetInt("Unit8Level")) * 16));
 			Line3.text = UpgradesLanguage.thisLanguageManager.GetTextValue ("Game.Skill");
 			Line4.text = UpgradesLanguage.thisLanguageManager.GetTextValue ("Upgrades.SkillNeeded");
 			Skil.text = PlayerPrefs.GetInt("TotalSkill").ToString();
@@ -448,8 +448,8 @@ function Update ()
 		}
 		if(PlayerPrefs.GetInt("Unit8Level") >= 20)
 		{
-			Line1.text = UpgradesLanguage.thisLanguageManager.GetTextValue ("Upgrades.HP") + " " + (1785 + ((PlayerPrefs.GetInt("Unit8Level") - 1) * 50));
-			Line2.text = UpgradesLanguage.thisLanguageManager.GetTextValue ("Upgrades.Attack") + " " + (920 + ((PlayerPrefs.GetInt("Unit8Level") - 1) * 16));
+			Line1.text = UpgradesLanguage.thisLanguageManager.GetTextValue ("Upgrades.HP") + " " + (2600 + ((PlayerPrefs.GetInt("Unit8Level") - 1) * 50));
+			Line2.text = UpgradesLanguage.thisLanguageManager.GetTextValue ("Upgrades.Attack") + " " + (1170 + ((PlayerPrefs.GetInt("Unit8Level") - 1) * 16));
 			Line3.text = "";
 			Line4.text = "";
 			Skil.text = "";
@@ -546,7 +546,7 @@ function Update ()
 	}
 	if(Selected == 11)
 	{
-		if(PlayerPrefs.GetInt("MinerLevel") < 60)
+		if(PlayerPrefs.GetInt("MinerLevel") < 75)
 		{
 			Line1.text = ""; //"Speed: " + (10+ ((PlayerPrefs.GetInt("StoneLevel") - 1) * 10)) + " -> " +  (10 + ((PlayerPrefs.GetInt("StoneLevel")) * 10));
 			Line2.text = UpgradesLanguage.thisLanguageManager.GetTextValue ("Upgrades.SpeedUpgrade");
@@ -563,7 +563,7 @@ function Update ()
 				Skil.color = Color.red;
 			}
 		}
-		if(PlayerPrefs.GetInt("MinerLevel") >= 60)
+		if(PlayerPrefs.GetInt("MinerLevel") >= 75)
 		{
 			Line1.text = UpgradesLanguage.thisLanguageManager.GetTextValue ("Upgrades.MaxLevel");
 			Line2.text = "";
@@ -576,7 +576,7 @@ function Update ()
 	}
 	if(Selected == 12)
 	{
-		if(PlayerPrefs.GetInt("CoinsLevel") < 60)
+		if(PlayerPrefs.GetInt("CoinsLevel") < 75)
 		{
 			Line1.text = ""; //"Speed: " + (10+ ((PlayerPrefs.GetInt("StoneLevel") - 1) * 10)) + " -> " +  (10 + ((PlayerPrefs.GetInt("StoneLevel")) * 10));
 			Line2.text = UpgradesLanguage.thisLanguageManager.GetTextValue ("Upgrades.Refinement");
@@ -593,7 +593,7 @@ function Update ()
 				Skil.color = Color.red;
 			}
 		}
-		if(PlayerPrefs.GetInt("CoinsLevel") >= 60)
+		if(PlayerPrefs.GetInt("CoinsLevel") >= 75)
 		{
 			Line1.text = UpgradesLanguage.thisLanguageManager.GetTextValue ("Upgrades.MaxLevel");
 			Line2.text = "";
@@ -634,8 +634,8 @@ function Levels()
 	{
 		Pago.text = UpgradesLanguage.thisLanguageManager.GetTextValue("Game.Level") + " " + PlayerPrefs.GetInt("CoolDownLevel").ToString() + "/5";
 	}
-	Mine.text = UpgradesLanguage.thisLanguageManager.GetTextValue("Game.Level") + " " + PlayerPrefs.GetInt("MinerLevel").ToString() + "/40";
-	Coin.text = UpgradesLanguage.thisLanguageManager.GetTextValue("Game.Level") + " " + PlayerPrefs.GetInt("CoinsLevel").ToString() + "/40"; 
+	Mine.text = UpgradesLanguage.thisLanguageManager.GetTextValue("Game.Level") + " " + PlayerPrefs.GetInt("MinerLevel").ToString() + "/75";
+	Coin.text = UpgradesLanguage.thisLanguageManager.GetTextValue("Game.Level") + " " + PlayerPrefs.GetInt("CoinsLevel").ToString() + "/75"; 
 }
 
 function Tutorial()
