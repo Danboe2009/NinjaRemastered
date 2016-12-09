@@ -337,6 +337,31 @@ namespace GooglePlayGames
             Authenticate(callback, false);
         }
 
+		public void Authenticate(Action<bool,string> callback)
+		{
+			Authenticate(callback, false, "auth error");
+		}
+
+		public void Authenticate(Action<bool,string> callback, bool silent, string message)
+		{
+			// make a platform-specific Play Games client
+			if (mClient == null)
+			{
+				GooglePlayGames.OurUtils.Logger.d(
+					"Creating platform-specific Play Games client.");
+				mClient = PlayGamesClientFactory.GetPlatformPlayGamesClient(mConfiguration);
+			}
+
+			// authenticate!
+			Action<bool> c = (bool a) => callback(a, message);
+			mClient.Authenticate(c, silent);
+		}
+
+		public void Authenticate(ILocalUser unused, Action<bool,string> callback)
+		{
+			Authenticate(callback, false, "auth error");
+		}
+
         /// <summary>
         /// Authenticate the local user with the Google Play Games service.
         /// </summary>

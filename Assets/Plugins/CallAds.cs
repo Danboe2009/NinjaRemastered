@@ -8,7 +8,7 @@ public class CallAds : MonoBehaviour{
 	public BannerView bannerView;
 
 	void Start ()	{
-		Debug.Log ("Started");
+		Debug.Log ("Started ads");
 		if (PlayerPrefs.GetInt ("NoAds") == 0 && SceneManager.GetActiveScene().name != "GameLevel") {
 			Debug.Log ("Requested Ad");
 			RequestBanner ();

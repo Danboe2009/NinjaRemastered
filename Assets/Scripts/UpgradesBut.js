@@ -37,6 +37,7 @@ function Start ()
 
 function Update () 
 {
+	Debug.Log("InApp " + Variables.InAppO);
 	Unit1LVL = PlayerPrefs.GetInt("Unit1Level");
 	Unit2LVL = PlayerPrefs.GetInt("Unit2Level");
 	Unit3LVL = PlayerPrefs.GetInt("Unit3Level");
@@ -51,7 +52,7 @@ function Update ()
     
     if (GetComponent.<Collider>().Raycast (ray, hit, 100)) 
     {
-    	if(Input.GetButton("Fire1") && Ready)
+    	if(Input.GetButton("Fire1") && Ready && !Variables.InAppO)
        	{
        		Ready = false;
        		if(Sound)
@@ -214,7 +215,7 @@ function Update ()
 					       		{
 					       			AudioSource.PlayClipAtPoint(No, Camera.main.transform.position);
 					       		}
-					       		ClearScreen(UpgradesLanguage.thisLanguageManager.GetTextValue("Upgrades.NotEnoughDiamonds"));
+					       		InApp();
        						}
        						if(Diamo >= DCost2)
        						{
@@ -283,7 +284,7 @@ function Update ()
 					       		{
 					       			AudioSource.PlayClipAtPoint(No, Camera.main.transform.position);
 					       		}
-					       		ClearScreen(UpgradesLanguage.thisLanguageManager.GetTextValue("Upgrades.NotEnoughDiamonds"));
+					       		InApp();
        						}
        						if(Diamo >= DCost3)
        						{
@@ -352,7 +353,7 @@ function Update ()
 					       		{
 					       			AudioSource.PlayClipAtPoint(No, Camera.main.transform.position);
 					       		}
-					       		ClearScreen(UpgradesLanguage.thisLanguageManager.GetTextValue("Upgrades.NotEnoughDiamonds"));
+					       		InApp();
        						}
        						if(Diamo >= DCost4)
        						{
@@ -421,7 +422,7 @@ function Update ()
 					       		{
 					       			AudioSource.PlayClipAtPoint(No, Camera.main.transform.position);
 					       		}
-					       		ClearScreen(UpgradesLanguage.thisLanguageManager.GetTextValue("Upgrades.NotEnoughDiamonds"));
+					       		InApp();
        						}
        						if(Diamo >= DCost5)
        						{
@@ -490,7 +491,7 @@ function Update ()
 					       		{
 					       			AudioSource.PlayClipAtPoint(No, Camera.main.transform.position);
 					       		}
-					       		ClearScreen(UpgradesLanguage.thisLanguageManager.GetTextValue("Upgrades.NotEnoughDiamonds"));
+					       		InApp();
        						}
        						if(Diamo >= DCost6)
        						{
@@ -559,7 +560,7 @@ function Update ()
 					       		{
 					       			AudioSource.PlayClipAtPoint(No, Camera.main.transform.position);
 					       		}
-					       		ClearScreen(UpgradesLanguage.thisLanguageManager.GetTextValue("Upgrades.NotEnoughDiamonds"));
+					       		InApp();
        						}
        						if(Diamo >= DCost7)
        						{
@@ -628,7 +629,7 @@ function Update ()
 					       		{
 					       			AudioSource.PlayClipAtPoint(No, Camera.main.transform.position);
 					       		}
-					       		ClearScreen(UpgradesLanguage.thisLanguageManager.GetTextValue("Upgrades.NotEnoughDiamonds"));
+					       		InApp();
        						}
        						if(Diamo >= DCost8)
        						{
@@ -656,7 +657,7 @@ function Update ()
 					       		{
 					       			AudioSource.PlayClipAtPoint(No, Camera.main.transform.position);
 					       		}
-					       		ClearScreen(UpgradesLanguage.thisLanguageManager.GetTextValue("Upgrades.NotEnoughDiamonds"));
+					       		InApp();
        						}
        						if(Diamo >= DCost9)
        						{
@@ -690,7 +691,7 @@ function Update ()
 					       		{
 					       			AudioSource.PlayClipAtPoint(No, Camera.main.transform.position);
 					       		}
-					       		ClearScreen(UpgradesLanguage.thisLanguageManager.GetTextValue("Upgrades.NotEnoughDiamonds"));
+					       		InApp();
 		       				}
 		       				if(Diamo >= DCost10)
 		       				{
@@ -1265,6 +1266,12 @@ function Update ()
     		}
 		}
 	}
+}
+
+function InApp()
+{
+	//ClearScreen(UpgradesLanguage.thisLanguageManager.GetTextValue("Upgrades.NotEnoughDiamonds"));
+	Instantiate(Resources.Load("OutOfDiamonds"),Vector3(0,5.2,0),Quaternion.Euler(90,0,0));
 }
 
 function Buy(Cost : int)

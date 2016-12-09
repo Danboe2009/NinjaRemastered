@@ -5,7 +5,7 @@ var anim : GameObject;
 private var open : boolean; 
 
 function Start () {
-
+	//Variables.InAppO = false;
 }
 
 function Update()

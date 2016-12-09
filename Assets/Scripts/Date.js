@@ -9,6 +9,8 @@ function Start ()
 	var day = dt.Now.Day.ToString();
 	var month = dt.Now.Month.ToString();
 	var year = dt.Now.Year.ToString();
+
+	Debug.Log("Last Play " + PlayerPrefs.GetString("LastPlayed"));
 	
 	if(PlayerPrefs.GetString("LastPlayed") == ""+month+day+year)
 	{
