@@ -21,8 +21,6 @@ function Update ()
 		if(Input.GetButtonDown("Fire1"))
 		{
 			Debug.Log("Run");
-			PlayerPrefs.SetInt("Diamonds", 5.0 + PlayerPrefs.GetInt("Diamonds"));
-			PlayerPrefs.SetInt("TotalDiamonds", 5.0 + PlayerPrefs.GetInt("TotalDiamonds"));
 			EveryplayScript.Share();
 
 			//Kamcord.ShowView();

@@ -37,7 +37,7 @@ function Update ()
 
 static function Setup()
 {
-	PlayerPrefs.SetInt("Version",47);
+	PlayerPrefs.SetInt("Version",48);
 	Debug.Log("RUN");
 	if(!PlayerPrefs.HasKey("NoAds"))
 	{

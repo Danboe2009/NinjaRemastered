@@ -8,21 +8,7 @@ public class EveryplayScript : MonoBehaviour
 		if(Everyplay.IsSupported())
 		{
 			Everyplay.StartRecording();
-			Everyplay.UploadDidComplete += Everyplay_UploadDidComplete;
-			Everyplay.UploadDidStart += Everyplay_UploadDidStart;
 		}
-	}
-
-
-
-	void Everyplay_UploadDidStart (int videoId)
-	{
-		Debug.Log ("Started Upload.");
-	}
-
-	void Everyplay_UploadDidComplete (int videoId)
-	{
-		Debug.Log ("Finished Upload.");
 	}
 
 	public static void StartRecording()

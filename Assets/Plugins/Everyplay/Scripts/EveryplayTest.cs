@@ -79,17 +79,19 @@ public class EveryplayTest : MonoBehaviour
     private void UploadDidStart(int videoId)
     {
         uploadStatusLabel.text = "Upload " + videoId + " started.";
+		Debug.Log ( "Upload " + videoId + " started.");
     }
 
     private void UploadDidProgress(int videoId, float progress)
     {
         uploadStatusLabel.text = "Upload " + videoId + " is " + Mathf.RoundToInt((float) progress * 100) + "% completed.";
+		Debug.Log ("Upload " + videoId + " is " + Mathf.RoundToInt((float) progress * 100) + "% completed.");
     }
 
     private void UploadDidComplete(int videoId)
     {
         uploadStatusLabel.text = "Upload " + videoId + " completed.";
-
+		Debug.Log ("Upload " + videoId + " completed.");
         StartCoroutine(ResetUploadStatusAfterDelay(2.0f));
     }
 
