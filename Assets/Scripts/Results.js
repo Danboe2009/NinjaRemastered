@@ -11,8 +11,11 @@ var TotalK : TextMesh;
 
 function Start () 
 {
-	//EveryplayScript.StopRecording();
+	EveryplayScript.StopRecording();
 	//Kamcord.StopRecording();
+	Variables.Plays ++;
+	ShowAds.Show(Variables.Plays);
+	Debug.Log("Plays " + Variables.Plays);
 	
 	Score.text = PlayerPrefs.GetInt("Score").ToString();
 	BonusS.text = PlayerPrefs.GetInt("BonusScore").ToString();

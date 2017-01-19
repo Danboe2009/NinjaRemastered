@@ -17,6 +17,7 @@ static var TPause : boolean;
 static var Movement : boolean;
 static var Debugger : boolean;
 static var InsCount : int;
+static var Plays : int;
 
 function Start () 
 {
@@ -24,6 +25,7 @@ function Start ()
 	Setup();
 	FirstLoad = true;
 	Tutorial = false;
+	Plays = 0;
 	Screen.sleepTimeout = SleepTimeout.NeverSleep;
 	InsCount = 0;
 }
@@ -35,7 +37,7 @@ function Update ()
 
 static function Setup()
 {
-	PlayerPrefs.SetInt("Version",43);
+	PlayerPrefs.SetInt("Version",47);
 	Debug.Log("RUN");
 	if(!PlayerPrefs.HasKey("NoAds"))
 	{

@@ -9,10 +9,12 @@ public class CallAds : MonoBehaviour{
 
 	void Start ()	{
 		Debug.Log ("Started ads");
+		RequestBanner ();
 		if (PlayerPrefs.GetInt ("NoAds") == 0 && SceneManager.GetActiveScene().name != "GameLevel") {
 			Debug.Log ("Requested Ad");
 			RequestBanner ();
 		}
+		Debug.Log ("No Ads :" + PlayerPrefs.GetInt ("NoAds"));
 	}
 
 	void Update(){
@@ -22,6 +24,7 @@ public class CallAds : MonoBehaviour{
 			}
 		} else if(PlayerPrefs.GetInt ("NoAds") == 0) {
 			if (bannerView != null) {
+				//Debug.Log ("Show Banner");
 				bannerView.Show ();
 			}
 		}
@@ -38,5 +41,8 @@ public class CallAds : MonoBehaviour{
 		AdRequest request = new AdRequest.Builder ().Build ();
 		// Load the banner with the request.
 		bannerView.LoadAd (request);
+
+		//Debug.Log ("Show Banner");
+		bannerView.Show ();
 	}
 }

@@ -40,6 +40,7 @@ function Start ()
 	
 	if(PlayerPrefs.GetString("LastPlayed") == ""+ymonth+yday+yyear && PlayerPrefs.GetInt("Bonus") == 0)
 	{
+		Debug.Log("Shown");
 		PlayerPrefs.SetInt("Streak",PlayerPrefs.GetInt("Streak") + 1);
 		PlayerPrefs.SetInt("Bonus",1);
 		if(PlayerPrefs.GetInt("Streak") < 5)

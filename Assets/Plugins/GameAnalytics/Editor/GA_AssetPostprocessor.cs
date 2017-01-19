@@ -103,7 +103,9 @@ namespace GameAnalyticsSDK.Editor
 					importer.SetCompatibleWithPlatform(BuildTarget.iOS, false);
 					importer.SetCompatibleWithPlatform(BuildTarget.tvOS, false);
 					importer.SetCompatibleWithPlatform(BuildTarget.WebGL, false);
-					importer.SetCompatibleWithPlatform(BuildTarget.WSAPlayer, true);
+                    importer.SetCompatibleWithPlatform(BuildTarget.Tizen, false);
+                    importer.SetCompatibleWithPlatform(BuildTarget.SamsungTV, false);
+                    importer.SetCompatibleWithPlatform(BuildTarget.WSAPlayer, true);
                     importer.SetPlatformData(BuildTarget.WSAPlayer, "SDK", "UWP");
                     importer.SetPlatformData(BuildTarget.WSAPlayer, "ScriptingBackend", "Il2Cpp");
                     importer.SaveAndReimport();
@@ -370,7 +372,7 @@ namespace GameAnalyticsSDK.Editor
             {
                 PluginImporter importer = AssetImporter.GetAtPath("Assets/Plugins/WSA/MetroLog.dll") as PluginImporter;
                 if (importer != null && (importer.GetCompatibleWithAnyPlatform() || !importer.GetCompatibleWithPlatform(BuildTarget.WSAPlayer) ||
-                    !importer.GetPlatformData(BuildTarget.WSAPlayer, "SDK").Equals("UWP")))
+                    !importer.GetPlatformData(BuildTarget.WSAPlayer, "SDK").Equals("AnySDK")))
                 {
                     importer.SetCompatibleWithAnyPlatform(false);
                     importer.SetCompatibleWithEditor(false);
@@ -387,7 +389,7 @@ namespace GameAnalyticsSDK.Editor
                     importer.SetCompatibleWithPlatform(BuildTarget.tvOS, false);
                     importer.SetCompatibleWithPlatform(BuildTarget.WebGL, false);
                     importer.SetCompatibleWithPlatform(BuildTarget.WSAPlayer, true);
-                    importer.SetPlatformData(BuildTarget.WSAPlayer, "SDK", "UWP");
+                    importer.SetPlatformData(BuildTarget.WSAPlayer, "SDK", "AnySDK");
                     importer.SaveAndReimport();
                 }
             }

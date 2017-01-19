@@ -48,7 +48,7 @@ Cube = GameObject.Find("GUI");
 function Start () 
 {
 	//Kamcord.StartRecording();
-	//EveryplayScript.StartRecording();
+	EveryplayScript.StartRecording();
 	Variables.Intro = true;
 	Variables.Debugger = false;
 	

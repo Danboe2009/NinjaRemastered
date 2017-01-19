@@ -5,6 +5,7 @@ using System;
 using GameAnalyticsSDK.Events;
 using GameAnalyticsSDK.Setup;
 using GameAnalyticsSDK.Wrapper;
+using GameAnalyticsSDK.State;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -45,7 +46,7 @@ namespace GameAnalyticsSDK
 		void OnEnable()
 		{
 			EditorApplication.hierarchyWindowItemOnGUI += GameAnalytics.HierarchyWindowCallback;
-			
+
 			if(Application.isPlaying)
 				_instance = this;
 		}
@@ -58,11 +59,11 @@ namespace GameAnalyticsSDK
 
 		public void Awake()
 		{
-			if (!Application.isPlaying) 
+			if (!Application.isPlaying)
 			{
 				return;
 			}
-			
+
 			if(_instance != null)
 			{
 				// only one system tracker allowed per scene
@@ -76,7 +77,7 @@ namespace GameAnalyticsSDK
 
 			Application.logMessageReceived += GA_Debug.HandleLog;
 
-#if UNITY_WEBGL && !UNITY_EDITOR
+#if (UNITY_TIZEN) && !UNITY_EDITOR
 			StartCoroutine(GameAnalyticsSDK.Net.Threading.GAThreading.Run());
 			StartCoroutine(WwwCoroutines());
 #endif
@@ -88,15 +89,15 @@ namespace GameAnalyticsSDK
 		{
 			if(!Application.isPlaying)
 				return;
-			
+
 			if(_instance == this)
-				_instance = null;	
+				_instance = null;
 		}
 
-		void OnApplicationPause(bool pauseStatus) 
+		void OnApplicationPause(bool pauseStatus)
 		{
 #if UNITY_ANDROID && !UNITY_EDITOR
-			AndroidJavaClass jc = new AndroidJavaClass("com.unity3d.player.UnityPlayer"); 
+			AndroidJavaClass jc = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
 			AndroidJavaObject activity = jc.GetStatic<AndroidJavaObject>("currentActivity");
 			AndroidJavaClass ga = new AndroidJavaClass("com.gameanalytics.sdk.GAPlatform");
 			if (pauseStatus) {
@@ -108,19 +109,22 @@ namespace GameAnalyticsSDK
 #endif
 		}
 
-		void OnApplicationQuit() 
+		void OnApplicationQuit()
 		{
 #if UNITY_ANDROID && !UNITY_EDITOR
-			AndroidJavaClass jc = new AndroidJavaClass("com.unity3d.player.UnityPlayer"); 
-			AndroidJavaObject activity = jc.GetStatic<AndroidJavaObject>("currentActivity");
-			AndroidJavaClass ga = new AndroidJavaClass("com.gameanalytics.sdk.GAPlatform");
-			ga.CallStatic("onActivityStopped", activity);
-#elif (!UNITY_EDITOR && !UNITY_IOS && !UNITY_ANDROID && !UNITY_TVOS)
+			if(!SettingsGA.UseManualSessionHandling)
+			{
+				AndroidJavaClass jc = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+				AndroidJavaObject activity = jc.GetStatic<AndroidJavaObject>("currentActivity");
+				AndroidJavaClass ga = new AndroidJavaClass("com.gameanalytics.sdk.GAPlatform");
+				ga.CallStatic("onActivityStopped", activity);
+			}
+#elif (!UNITY_EDITOR && !UNITY_IOS && !UNITY_ANDROID && !UNITY_TVOS && !UNITY_WEBGL)
 			if(!SettingsGA.UseManualSessionHandling)
 			{
 				GameAnalyticsSDK.Net.GameAnalytics.OnStop();
 			}
-#if UNITY_WEBGL
+#if UNITY_TIZEN
 			keepRunningWwwCoroutines = false;
 #endif
 #endif
@@ -128,29 +132,29 @@ namespace GameAnalyticsSDK
 
 #endregion
 
-#if UNITY_WEBGL && !UNITY_EDITOR
+#if (UNITY_TIZEN) && !UNITY_EDITOR
 
 		private static bool keepRunningWwwCoroutines = true;
 
 		private static IEnumerator WwwCoroutines()
 		{
-			while(keepRunningWwwCoroutines) 
+			while(keepRunningWwwCoroutines)
 			{
 				Queue<IEnumerator> queue = GameAnalyticsSDK.Net.GameAnalytics.RequestCoroutineQueue;
 
-				if(queue.Count > 0) 
+				if(queue.Count > 0)
 				{
 					IEnumerator enumerator = queue.Dequeue();
 					Coroutine coroutine = _instance.StartCoroutine(enumerator);
 
-					while(enumerator.MoveNext()) 
+					while(enumerator.MoveNext())
 					{
 						yield return null;
 					}
 
 					yield return coroutine;
-				} 
-				else 
+				}
+				else
 				{
 					yield return null;
 				}
@@ -163,7 +167,8 @@ namespace GameAnalyticsSDK
 			try
 			{
 				_settings = (Settings)Resources.Load("GameAnalytics/Settings", typeof(Settings));
-				
+				GameAnalyticsSDK.State.GAState.Init();
+
 #if UNITY_EDITOR
 				if(_settings == null)
 				{
@@ -193,7 +198,7 @@ namespace GameAnalyticsSDK
 					AssetDatabase.SaveAssets();
 					Debug.LogWarning("GameAnalytics: Settings file didn't exist and was created");
 					Selection.activeObject = asset;
-					
+
 					//save reference
 					_settings =	asset;
 				}
@@ -209,10 +214,6 @@ namespace GameAnalyticsSDK
 		{
 			if(!Application.isPlaying)
 				return; // no need to setup anything else if we are in the editor and not playing
-			
-#if UNITY_EDITOR
-			Debug.Log("GameAnalytics running in Unity Editor: event validation disabled.");
-#endif
 
 			if(SettingsGA.InfoLogBuild)
 			{
@@ -223,7 +224,7 @@ namespace GameAnalyticsSDK
 			{
 				GA_Setup.SetVerboseLog(true);
 			}
-			
+
 			int platformIndex = GetPlatformIndex();
 
 			GA_Wrapper.SetUnitySdkVersion("unity " + Settings.VERSION);
@@ -266,11 +267,11 @@ namespace GameAnalyticsSDK
 
 			if(platformIndex >= 0)
 			{
-				if (!SettingsGA.UseCustomId) 
+				if (!SettingsGA.UseCustomId)
 				{
 					GA_Wrapper.Initialize (SettingsGA.GetGameKey (platformIndex), SettingsGA.GetSecretKey (platformIndex));
-				} 
-				else 
+				}
+				else
 				{
 					Debug.Log ("Custom id is enabled. Initialize is delayed until custom id has been set.");
 				}
@@ -483,7 +484,7 @@ namespace GameAnalyticsSDK
 		/// <param name="userId">User identifier.</param>
 		public static void SetCustomId(string userId)
 		{
-			if (SettingsGA.UseCustomId) 
+			if (SettingsGA.UseCustomId)
 			{
 				Debug.Log ("Initializing with custom id: " + userId);
 				GA_Wrapper.SetCustomUserId (userId);
@@ -496,8 +497,8 @@ namespace GameAnalyticsSDK
 				{
 					Debug.LogWarning("Unsupported platform (or missing platform in settings): " + Application.platform);
 				}
-			} 
-			else 
+			}
+			else
 			{
 				Debug.LogWarning ("Custom id is not enabled");
 			}
@@ -611,8 +612,8 @@ namespace GameAnalyticsSDK
 				}
 			}
 			// HACK: To also check for RuntimePlatform.MetroPlayerARM, RuntimePlatform.MetroPlayerX64 and RuntimePlatform.MetroPlayerX86 which are deprecated but have same value as the WSA enums
-            else if (platform == RuntimePlatform.WSAPlayerARM || platform == RuntimePlatform.WSAPlayerX64 || platform == RuntimePlatform.WSAPlayerX86 ||
-				((int)platform == (int)RuntimePlatform.WSAPlayerARM) || ((int)platform == (int)RuntimePlatform.WSAPlayerX64) || ((int)platform == (int)RuntimePlatform.WSAPlayerX86))
+            else if (platform == RuntimePlatform.WSAPlayerARM || platform == RuntimePlatform.WSAPlayerX64 || platform == RuntimePlatform.WSAPlayerX86 || platform == RuntimePlatform.WP8Player ||
+                ((int)platform == (int)RuntimePlatform.WSAPlayerARM) || ((int)platform == (int)RuntimePlatform.WSAPlayerX64) || ((int)platform == (int)RuntimePlatform.WSAPlayerX86))
             {
 				result = SettingsGA.Platforms.IndexOf(RuntimePlatform.WSAPlayerARM);
             }
@@ -633,10 +634,14 @@ namespace GameAnalyticsSDK
 		/// <param name="">File name including extension e.g. image.png</param>
 		public static string WhereIs(string _file)
 		{
-			string[] assets = {"Assets"};
+#if UNITY_SAMSUNGTV
+			return "";
+#else
+			string[] assets = { Path.DirectorySeparatorChar + "Assets" + Path.DirectorySeparatorChar};
 			FileInfo[] myFile = new DirectoryInfo ("Assets").GetFiles (_file, SearchOption.AllDirectories);
 			string[] temp = myFile [0].ToString ().Split (assets, 2, System.StringSplitOptions.None);
-			return assets[0] + temp [1];
+			return "Assets" + Path.DirectorySeparatorChar + temp [1];
+#endif
 		}
 
 		public static void HierarchyWindowCallback(int instanceID, Rect selectionRect)
@@ -647,16 +652,16 @@ namespace GameAnalyticsSDK
 				float addX = 0;
 				if(go.GetComponent("PlayMakerFSM") != null)
 					addX = selectionRect.height + 2;
-				
+
 				if(GameAnalytics.SettingsGA.Logo == null)
 				{
 					GameAnalytics.SettingsGA.Logo = (Texture2D)AssetDatabase.LoadAssetAtPath(WhereIs("gaLogo.png"), typeof(Texture2D));
 				}
-				
+
 				Graphics.DrawTexture(new Rect(GUILayoutUtility.GetLastRect().width - selectionRect.height - 5 - addX, selectionRect.y, selectionRect.height, selectionRect.height), GameAnalytics.SettingsGA.Logo);
 			}
 		}
-		
+
 #endif
-	}
+        }
 }

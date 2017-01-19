@@ -23,7 +23,8 @@ function Update ()
 			Debug.Log("Run");
 			PlayerPrefs.SetInt("Diamonds", 5.0 + PlayerPrefs.GetInt("Diamonds"));
 			PlayerPrefs.SetInt("TotalDiamonds", 5.0 + PlayerPrefs.GetInt("TotalDiamonds"));
-			//EveryplayScript.Share();
+			EveryplayScript.Share();
+
 			//Kamcord.ShowView();
 		}
 	}
