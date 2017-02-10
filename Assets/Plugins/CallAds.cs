@@ -20,11 +20,12 @@ public class CallAds : MonoBehaviour{
 	void Update(){
 		if (SceneManager.GetActiveScene ().name == "GameLevel") {
 			if (bannerView != null) {
+				Debug.Log ("Hide Ad");
 				bannerView.Hide ();
 			}
 		} else if(PlayerPrefs.GetInt ("NoAds") == 0) {
 			if (bannerView != null) {
-				//Debug.Log ("Show Banner");
+				Debug.Log ("Show Banner");
 				bannerView.Show ();
 			}
 		}
@@ -42,7 +43,7 @@ public class CallAds : MonoBehaviour{
 		// Load the banner with the request.
 		bannerView.LoadAd (request);
 
-		//Debug.Log ("Show Banner");
+		Debug.Log ("Show Banner");
 		bannerView.Show ();
 	}
 }

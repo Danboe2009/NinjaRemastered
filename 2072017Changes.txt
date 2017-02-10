@@ -1,0 +1,25 @@
+Here are the notes I got from my conversation with the mobile guy:
+
+1) Remove banner ads since they are obstructing gameplay and video ads are making us more money per ad by a long shot X
+
+2) Consider displaying a video ad to let the user play from the point at which they died
+
+3) Consider removing Everyplay video replays since a lot of our gameplay is too similar and people generally don't view our replays
+
+4) When the player opens the game for the first time send them straight to the tutorial level instead of the Main Menu - return them to the Main Menu each time they open the app after the first time
+
+5) Add visuals to show the miner is gaining coins for you (+1, +1 etc)
+
+6) Add a shine to the ninja deployment buttons when they are active and ready to deploy X
+
+7) Consider adding a message when a player attempts to upgrade a ninja without enough skill explaining where you can gain more skill points - "Insufficient Skill - Defeat more Oni to gain more skill points"
+
+8) Can we filter the Leaderboard to "ALL" instead of "Social" by default - new users have an empty list since they have a filter for "Social" first and not "ALL"
+
+9) Consider changing the scrolling of the screen to a swipe gesture instead of a tap and hold - His first instinct was to swipe the screen (Not a huge deal to me and if it is too much work don't do it)
+
+10) Take the player to the store automatically instead of having them search for the button to enter it - currently the user has to click a button to enter the store which many people won't do
+
+11) Consider tweaking gameplay so that a new mechanic (new ninja unit) is introduced around the 3rd level in to capture their interest (this task would be for me to balance the diamond drop rate to allow an unlock after LVL 3)
+
+12) Revamp the store similar to the game Dungeon Boss - Extras are laid out for them, add more value for higher ticket items (bonus diamonds, % off etc), include "Best Value" or "Most Popular" - he said it was a great thing that we had all of the purchase options visible right away

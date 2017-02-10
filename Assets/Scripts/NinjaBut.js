@@ -9,16 +9,19 @@ var Num : int;
 var count : float;
 var Ting : AudioClip;
 
+var anim : Animation;
+
 var debug : boolean;
 
 private var Unlocked : boolean;
 private var Played : boolean;
 private var Shown : boolean;
 private var Auto : boolean;
+var bounced : boolean;
 private var Cube : GameObject;
 private var Box : GameObject;
 private var Mess : TextMesh;
-private var Cool : float;
+var Cool : float;
 private var TCool : float;
 
 private var Unit1LVL : int;
@@ -45,6 +48,7 @@ function Start ()
 	}
 	Cool = 0;
 	TCool = 0;
+	//bounced = true;
 	
 	Unit1LVL = PlayerPrefs.GetInt("Unit1Level");
 	Unit2LVL = PlayerPrefs.GetInt("Unit2Level");
@@ -317,6 +321,15 @@ function Update ()
 	if(Cool < 1)
 	{
 		Coo.transform.localScale.x = 0;
+
+	}
+	if(Cool <= 0)
+	{
+		if(!this.bounced && Variables.Coins > Cost){
+			bounced = true;
+			anim.Play();
+			//Debug.Log(" Played: " + Num);
+		}
 	}
 	
 	var ray = Camera.main.ScreenPointToRay (Input.mousePosition);
@@ -364,6 +377,7 @@ function Update ()
 					Tutorial.Ninja = true;
 					Cool = CoolDown;
 					TCool = CoolDown;
+					bounced = false;
 					if(Variables.Tutorial)
 					{
 						this.tag = "Tutorial";
@@ -388,6 +402,7 @@ function Update ()
 				{
 					Cool = CoolDown;
 					TCool = CoolDown;
+					bounced = false;
 					PlayerPrefs.SetInt("Nunchuckman",PlayerPrefs.GetInt("Nunchuckman") + 1);
 					Variables.Coins = Variables.Coins - Cost;
 					var Temp2 = new Instantiate(Hero,Vector3(-47,2.5,-09),Quaternion.Euler(90,0,0));
@@ -408,6 +423,7 @@ function Update ()
 				{
 					Cool = CoolDown;
 					TCool = CoolDown;
+					bounced = false;
 					PlayerPrefs.SetInt("Throwingman",PlayerPrefs.GetInt("Throwingman") + 1);
 					Variables.Coins = Variables.Coins - Cost;
 					var Temp3 = new Instantiate(Hero,Vector3(-47,2.5,-09),Quaternion.Euler(90,0,0));
@@ -428,6 +444,7 @@ function Update ()
 				{
 					Cool = CoolDown;
 					TCool = CoolDown;
+					bounced = false;
 					PlayerPrefs.SetInt("Longbowman",PlayerPrefs.GetInt("Longbowman") + 1);
 					Variables.Coins = Variables.Coins - Cost;
 					var Temp4 = new Instantiate(Hero,Vector3(-47,2.5,-09),Quaternion.Euler(90,0,0));
@@ -448,6 +465,7 @@ function Update ()
 				{
 					Cool = CoolDown;
 					TCool = CoolDown;
+					bounced = false;
 					PlayerPrefs.SetInt("Woodman",PlayerPrefs.GetInt("Woodman") + 1);
 					Variables.Coins = Variables.Coins - Cost;
 					var Temp5 = new Instantiate(Hero,Vector3(-47,2.5,-09),Quaternion.Euler(90,0,0));
@@ -468,6 +486,7 @@ function Update ()
 				{
 					Cool = CoolDown;
 					TCool = CoolDown;
+					bounced = false;
 					PlayerPrefs.SetInt("Chainman",PlayerPrefs.GetInt("Chainman") + 1);
 					Variables.Coins = Variables.Coins - Cost;
 					var Temp6 = new Instantiate(Hero,Vector3(-47,2.5,-09),Quaternion.Euler(90,0,0));
@@ -488,6 +507,7 @@ function Update ()
 				{
 					Cool = CoolDown;
 					TCool = CoolDown;
+					bounced = false;
 					PlayerPrefs.SetInt("Saiman",PlayerPrefs.GetInt("Saiman") + 1);
 					Variables.Coins = Variables.Coins - Cost;
 					var Temp7 = new Instantiate(Hero,Vector3(-47,2.5,-09),Quaternion.Euler(90,0,0));
@@ -508,6 +528,7 @@ function Update ()
 				{
 					Cool = CoolDown;
 					TCool = CoolDown;
+					bounced = false;
 					PlayerPrefs.SetInt("Handman",PlayerPrefs.GetInt("Handman") + 1);
 					Variables.Coins = Variables.Coins - Cost;
 					var Temp8 = new Instantiate(Hero,Vector3(-47,2.5,-09),Quaternion.Euler(90,0,0));
@@ -532,6 +553,7 @@ function Update ()
 			{
 				Cool = CoolDown;
 				TCool = CoolDown;
+				bounced = false;
 				PlayerPrefs.SetInt("Swordsman",PlayerPrefs.GetInt("Swordsman") + 1);
 				Variables.Coins = Variables.Coins - Cost;
 				var ATemp1 = new Instantiate(Hero,Vector3(-47,2.5,-09),Quaternion.Euler(90,0,0));
@@ -552,6 +574,7 @@ function Update ()
 			{
 				Cool = CoolDown;
 				TCool = CoolDown;
+				bounced = false;
 				PlayerPrefs.SetInt("Nunchuckman",PlayerPrefs.GetInt("Nunchuckman") + 1);
 				Variables.Coins = Variables.Coins - Cost;
 				var ATemp2 = new Instantiate(Hero,Vector3(-47,2.5,-09),Quaternion.Euler(90,0,0));
@@ -572,6 +595,7 @@ function Update ()
 			{
 				Cool = CoolDown;
 				TCool = CoolDown;
+				bounced = false;
 				PlayerPrefs.SetInt("Throwingman",PlayerPrefs.GetInt("Throwingman") + 1);
 				Variables.Coins = Variables.Coins - Cost;
 				var ATemp3 = new Instantiate(Hero,Vector3(-47,2.5,-09),Quaternion.Euler(90,0,0));
@@ -592,6 +616,7 @@ function Update ()
 			{
 				Cool = CoolDown;
 				TCool = CoolDown;
+				bounced = false;
 				PlayerPrefs.SetInt("Longbowman",PlayerPrefs.GetInt("Longbowman") + 1);
 				Variables.Coins = Variables.Coins - Cost;
 				var ATemp4 = new Instantiate(Hero,Vector3(-47,2.5,-09),Quaternion.Euler(90,0,0));
@@ -612,6 +637,7 @@ function Update ()
 			{
 				Cool = CoolDown;
 				TCool = CoolDown;
+				bounced = false;
 				PlayerPrefs.SetInt("Woodman",PlayerPrefs.GetInt("Woodman") + 1);
 				Variables.Coins = Variables.Coins - Cost;
 				var ATemp5 = new Instantiate(Hero,Vector3(-47,2.5,-09),Quaternion.Euler(90,0,0));
@@ -632,6 +658,7 @@ function Update ()
 			{
 				Cool = CoolDown;
 				TCool = CoolDown;
+				bounced = false;
 				PlayerPrefs.SetInt("Chainman",PlayerPrefs.GetInt("Chainman") + 1);
 				Variables.Coins = Variables.Coins - Cost;
 				var ATemp6 = new Instantiate(Hero,Vector3(-47,2.5,-09),Quaternion.Euler(90,0,0));
@@ -652,6 +679,7 @@ function Update ()
 			{
 				Cool = CoolDown;
 				TCool = CoolDown;
+				bounced = false;
 				PlayerPrefs.SetInt("Saiman",PlayerPrefs.GetInt("Saiman") + 1);
 				Variables.Coins = Variables.Coins - Cost;
 				var ATemp7 = new Instantiate(Hero,Vector3(-47,2.5,-09),Quaternion.Euler(90,0,0));
@@ -672,6 +700,7 @@ function Update ()
 			{
 				Cool = CoolDown;
 				TCool = CoolDown;
+				bounced = false;
 				PlayerPrefs.SetInt("Handman",PlayerPrefs.GetInt("Handman") + 1);
 				Variables.Coins = Variables.Coins - Cost;
 				var ATemp8 = new Instantiate(Hero,Vector3(-47,2.5,-09),Quaternion.Euler(90,0,0));
