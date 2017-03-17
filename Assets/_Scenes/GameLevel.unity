@@ -1326,6 +1326,7 @@ GameObject:
   - component: {fileID: 697258488}
   - component: {fileID: 697258485}
   - component: {fileID: 697258484}
+  - component: {fileID: 697258486}
   m_Layer: 0
   m_Name: Miner
   m_TagString: Untagged
@@ -1385,6 +1386,19 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &697258486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 697258483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba7a4e9ac133a2c41a42753dc0b5e11d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damag: {fileID: 1693416255697358, guid: f6faf51159a8bb648b671862a12029dc, type: 2}
+  Tex: {fileID: 697258485}
 --- !u!4 &697258488
 Transform:
   m_ObjectHideFlags: 0

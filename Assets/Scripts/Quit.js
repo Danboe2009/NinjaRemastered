@@ -36,8 +36,8 @@ function ClearScreen(MesTex)
        	Destroy(Boa[c]);
 	}
 	
-	Box = Instantiate(Resources.Load("MessageBox"),Vector3(0,5,0),Quaternion.Euler(90,0,0));
-	Mess = Instantiate(Resources.Load("Message",TextMesh),Vector3(0,5.2,0),Quaternion.Euler(90,0,0));
+	Box = Instantiate(Resources.Load("MessageBox"),Vector3(0,7,0),Quaternion.Euler(90,0,0));
+	Mess = Instantiate(Resources.Load("Message",TextMesh),Vector3(0,7.2,0),Quaternion.Euler(90,0,0));
 	
 	if(Ting.length > 2 && PlayerPrefs.GetInt("Sound") == 1)
 	{

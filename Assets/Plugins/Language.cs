@@ -16,6 +16,8 @@ public class Language : MonoBehaviour
 	public TextMesh Diamonds30;
 	public TextMesh Diamonds125;
 	public TextMesh Diamonds300;
+	public TextMesh BestValue;
+	public TextMesh MostPopular;
 	public TextMesh Games;
 	public TextMesh OptionsBut;
 	public TextMesh Achievements;
@@ -52,6 +54,8 @@ public class Language : MonoBehaviour
 		Diamonds30.text = thisLanguageManager.GetTextValue ("Menu.30Diamonds");
 		Diamonds125.text = thisLanguageManager.GetTextValue ("Menu.125Diamonds");
 		Diamonds300.text = thisLanguageManager.GetTextValue ("Menu.300Diamonds");
+		BestValue.text = thisLanguageManager.GetTextValue ("Menu.BestValue");
+		MostPopular.text = thisLanguageManager.GetTextValue ("Menu.MostPopular");
 		Games.text = thisLanguageManager.GetTextValue ("Menu.Games");
 		OptionsBut.text = thisLanguageManager.GetTextValue ("Menu.Options");
 		Achievements.text = thisLanguageManager.GetTextValue ("Menu.Achievements");

@@ -314,6 +314,9 @@ function Lose()
 {
 	if(!Won)
 	{
+		if(PlayerPrefs.GetInt("Level") > 1){
+			PlayerPrefs.SetInt("Level",PlayerPrefs.GetInt("Level")-1);
+		}
 		SetScore();
 		Won = true;
 		Variables.Done = true; 

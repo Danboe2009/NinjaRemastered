@@ -251,6 +251,9 @@
 	<data name="Menu.Back" xml:space="preserve">
 		<value>Back</value>
 	</data>
+	<data name="Menu.BestValue" xml:space="preserve">
+		<value>Best Value	</value>
+	</data>
 	<data name="Menu.Cleared" xml:space="preserve">
 		<value>Game Cleared</value>
 	</data>
@@ -304,6 +307,9 @@
 	</data>
 	<data name="Menu.LogoTop" xml:space="preserve">
 		<value>Ninja Warfare:</value>
+	</data>
+	<data name="Menu.MostPopular" xml:space="preserve">
+		<value>Most Popular</value>
 	</data>
 	<data name="Menu.No" xml:space="preserve">
 		<value>No</value>

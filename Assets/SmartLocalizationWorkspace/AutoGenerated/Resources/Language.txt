@@ -482,4 +482,10 @@
 	<data name="Upgrades.WoodStaff" xml:space="preserve">
 		<value>Wood Staff</value>
 	</data>
+	<data name="Menu.BestValue" xml:space="preserve">
+		<value>Best Value	</value>
+	</data>
+	<data name="Menu.MostPopular" xml:space="preserve">
+		<value>Most Popular</value>
+	</data>
 </root>
