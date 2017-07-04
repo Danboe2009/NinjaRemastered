@@ -1,7 +1,7 @@
 ﻿#pragma strict
 
 var Ting : AudioClip;
-//var anim : tk2dSpriteAnimator;
+var anim : Animator;
 var Type : String;
 var Dia : SpriteRenderer;
 
@@ -12,31 +12,41 @@ private var Sound : int;
 private var Moving : boolean;
 private var Grow : boolean;
 private var CoinB : GameObject;
+private var timer : float;
+private var playing : boolean;
 
 Coins = GameObject.Find("BTopLeft").GetComponent(CoinGen);
 CoinB = GameObject.Find("LeftBox");
 
 function Start () 
 {
+	timer = 60.0;
 	Sound = PlayerPrefs.GetInt("Sound");
 	CoinL = PlayerPrefs.GetInt("CoinsLevel");
 	Moving = false;
 	if(Type == "Coin")
 	{
-		ran = Random.Range(0,10);	
-		if(ran == 9)
+		ran = Random.Range(0,100);	
+		if(ran == 99)
 		{
 			//anim.Play("Coin");
 			//Dia.transform.localScale = Vector3(1.05,1.05,1);
+			anim.Play("Diamond");
+			Type = "Diam";
 		}
-		if(ran < 9)
+		if(ran < 99 && ran  > 89)
 		{
 			//anim.Play("Coin");
+
+		}
+		else
+		{
 			Dia.transform.localScale = Vector3(0.65,0.65,1);
 		}
 	}
 	if(Type == "Diam")
 	{
+		anim.Play("Diamond");
 		StartCoroutine("Diamond");
 	}
 	if(Variables.Debugger)
@@ -75,11 +85,11 @@ function Update ()
 		Destroy(this.gameObject,0);
 		if(Type == "Coin")
 		{
-			if(ran == 9)
+			if(ran < 99 && ran  > 89)
 			{
 				Coins.AddCoin(15 * CoinL);
 			}
-			if(ran < 9)
+			else
 			{
 				Coins.AddCoin(7 * CoinL);
 			}
@@ -98,6 +108,36 @@ function Update ()
 }
 function FixedUpdate()
 {
+	//Debug.Log("Timer: " + timer);
+	if(Type == "Coin")
+		{
+		timer-= 0.1;
+	    
+	    if(timer < 20){
+	    	if(!playing){
+	    		playing = true;
+	    		anim.Play("ShinyCoin");
+	    	}
+	    }
+	    if(timer < 0){
+	    	Destroy(this.gameObject);
+	    }
+    }
+    if(Type == "Diam")
+		{
+		timer-= 0.1;
+	    
+	    if(timer < 20){
+	    	if(!playing){
+	    		playing = true;
+	    		anim.Play("ShinyDiamond");
+	    	}
+	    }
+	    if(timer < 0){
+	    	Destroy(this.gameObject);
+	    }
+    }
+
     var step = 45 * Time.deltaTime;
 	if(Moving)
     {
@@ -111,11 +151,12 @@ function FixedUpdate()
     	//Dia.scale.x = Dia.scale.x + 0.01;
     	//Dia.scale.y = Dia.scale.y + 0.01;
     }
+
 }
 
 function Diamond()
 {
-	Grow = true;
-	yield WaitForSeconds(2);
-	Moving = true;
+	//Grow = true;
+	//yield WaitForSeconds(2);
+	//Moving = true;
 }

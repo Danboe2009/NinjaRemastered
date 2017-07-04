@@ -325,7 +325,7 @@ function Update ()
 	}
 	if(Cool <= 0)
 	{
-		if(!this.bounced && Variables.Coins > Cost){
+		if(!this.bounced && Variables.Coins > Cost && Unlocked){
 			bounced = true;
 			anim.Play();
 			//Debug.Log(" Played: " + Num);
