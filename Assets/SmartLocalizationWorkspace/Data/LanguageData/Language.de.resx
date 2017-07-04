@@ -1,0 +1,515 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root><!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+	<data name="Game.Coins" xml:space="preserve">
+		<value>M�nzen:</value>
+	</data>
+	<data name="Game.Continue" xml:space="preserve">
+		<value>Fortsetzen</value>
+	</data>
+	<data name="Game.Diamonds" xml:space="preserve">
+		<value>Diamanten:</value>
+	</data>
+	<data name="Game.Level" xml:space="preserve">
+		<value>Stufe:</value>
+	</data>
+	<data name="Game.Lose" xml:space="preserve">
+		<value>Du hast verloren!</value>
+	</data>
+	<data name="Game.Menu" xml:space="preserve">
+		<value>Men�</value>
+	</data>
+	<data name="Game.MoveBot" xml:space="preserve">
+		<value>um dich zu bewegen</value>
+	</data>
+	<data name="Game.MoveTop" xml:space="preserve">
+		<value>Ber�hre hier,</value>
+	</data>
+	<data name="Game.Pause" xml:space="preserve">
+		<value>Das Spiel ist pausiert</value>
+	</data>
+	<data name="Game.Score" xml:space="preserve">
+		<value>Ergebnis:</value>
+	</data>
+	<data name="Game.Skill" xml:space="preserve">
+		<value>F�higkeit</value>
+	</data>
+	<data name="Game.Tutorial11" xml:space="preserve">
+		<value>Hallo, Willkommen in Ninja</value>
+	</data>
+	<data name="Game.Tutorial12" xml:space="preserve">
+		<value>Krieg. Ich bin Sensei Lien.</value>
+	</data>
+	<data name="Game.Tutorial13" xml:space="preserve">
+		<value>Lass uns dein Training beginnen!</value>
+	</data>
+	<data name="Game.Tutorial21" xml:space="preserve">
+		<value>Bl�ttern Sie durch den Bildschirm</value>
+	</data>
+	<data name="Game.Tutorial22" xml:space="preserve">
+		<value>Rechts dr�cken oder</value>
+	</data>
+	<data name="Game.Tutorial23" xml:space="preserve">
+		<value>Linke Seite des Bildschirms</value>
+	</data>
+	<data name="Game.Tutorial31" xml:space="preserve">
+		<value>Das ist der Ninja-Baum.</value>
+	</data>
+	<data name="Game.Tutorial32" xml:space="preserve">
+		<value>Die Oni versuchen zu</value>
+	</data>
+	<data name="Game.Tutorial33" xml:space="preserve">
+		<value>zerst�re es.</value>
+	</data>
+	<data name="Game.Tutorial41" xml:space="preserve">
+		<value>Verteidige es durch die Einstellung</value>
+	</data>
+	<data name="Game.Tutorial42" xml:space="preserve">
+		<value>Ninjas! Tippen Sie auf die Ninja</value>
+	</data>
+	<data name="Game.Tutorial43" xml:space="preserve">
+		<value>Icon, um ein ninja zu entsenden.</value>
+	</data>
+	<data name="Game.Tutorial51" xml:space="preserve">
+		<value>Besiege Oni, um M�nzen zu gewinnen!</value>
+	</data>
+	<data name="Game.Tutorial52" xml:space="preserve">
+		<value>Tippen Sie auf die M�nze</value>
+	</data>
+	<data name="Game.Tutorial53" xml:space="preserve">
+		<value>sammle es ein.</value>
+	</data>
+	<data name="Game.Tutorial61" xml:space="preserve">
+		<value>Zerst�re das Oni Portal</value>
+	</data>
+	<data name="Game.Tutorial62" xml:space="preserve">
+		<value>Um das Level zu vervollst�ndigen.</value>
+	</data>
+	<data name="Game.Tutorial71" xml:space="preserve">
+		<value>Komplette Levels zu</value>
+	</data>
+	<data name="Game.Tutorial72" xml:space="preserve">
+		<value>Sichern die verlorenen</value>
+	</data>
+	<data name="Game.Tutorial73" xml:space="preserve">
+		<value>Diamanten.</value>
+	</data>
+	<data name="Game.Tutorial81" xml:space="preserve">
+		<value>Diamanten k�nnen verwendet werden</value>
+	</data>
+	<data name="Game.Tutorial82" xml:space="preserve">
+		<value>Neu kaufen</value>
+	</data>
+	<data name="Game.Tutorial83" xml:space="preserve">
+		<value>Einheiten.</value>
+	</data>
+	<data name="Game.Tutorial91" xml:space="preserve">
+		<value>Beginnen, ein neues zu erwerben</value>
+	</data>
+	<data name="Game.Tutorial92" xml:space="preserve">
+		<value>Einheit mit diesem Diamanten.</value>
+	</data>
+	<data name="Game.Upgrade" xml:space="preserve">
+		<value>Aktualisierung</value>
+	</data>
+	<data name="Game.Win" xml:space="preserve">
+		<value>Du hast gewonnen!</value>
+	</data>
+	<data name="InApp.Best" xml:space="preserve">
+		<value>Bester Wert</value>
+	</data>
+	<data name="InApp.Hundred" xml:space="preserve">
+		<value>125 Diamanten</value>
+	</data>
+	<data name="InApp.Most" xml:space="preserve">
+		<value>Am beliebtesten</value>
+	</data>
+	<data name="InApp.Ten" xml:space="preserve">
+		<value>10 Diamanten</value>
+	</data>
+	<data name="InApp.Thirty" xml:space="preserve">
+		<value>30 Diamanten</value>
+	</data>
+	<data name="InApp.Three" xml:space="preserve">
+		<value>300 Diamanten</value>
+	</data>
+	<data name="InApp.Title" xml:space="preserve">
+		<value>Diamanten kaufen</value>
+	</data>
+	<data name="Menu.10Diamonds" xml:space="preserve">
+		<value>10 Diamanten</value>
+	</data>
+	<data name="Menu.125Diamonds" xml:space="preserve">
+		<value>125 Diamanten</value>
+	</data>
+	<data name="Menu.300Diamonds" xml:space="preserve">
+		<value>300 Diamanten</value>
+	</data>
+	<data name="Menu.30Diamonds" xml:space="preserve">
+		<value>30 Diamanten</value>
+	</data>
+	<data name="Menu.Achievements" xml:space="preserve">
+		<value>Errungenschaften</value>
+	</data>
+	<data name="Menu.Awarded" xml:space="preserve">
+		<value>Free Diamond Ausgezeichnet</value>
+	</data>
+	<data name="Menu.Back" xml:space="preserve">
+		<value>Zur�ck</value>
+	</data>
+	<data name="Menu.BestValue" xml:space="preserve">
+		<value>Bester Wert</value>
+	</data>
+	<data name="Menu.Cleared" xml:space="preserve">
+		<value>Spiel gel�scht</value>
+	</data>
+	<data name="Menu.Connected" xml:space="preserve">
+		<value>In Verbindung bleiben!</value>
+	</data>
+	<data name="Menu.Credits" xml:space="preserve">
+		<value>kredite</value>
+	</data>
+	<data name="Menu.Daily1" xml:space="preserve">
+		<value>Tag 1</value>
+	</data>
+	<data name="Menu.Daily2" xml:space="preserve">
+		<value>Tag 2</value>
+	</data>
+	<data name="Menu.Daily3" xml:space="preserve">
+		<value>Tag 3</value>
+	</data>
+	<data name="Menu.Daily4" xml:space="preserve">
+		<value>Tag 4</value>
+	</data>
+	<data name="Menu.Daily5" xml:space="preserve">
+		<value>Tag 5</value>
+	</data>
+	<data name="Menu.Daily6" xml:space="preserve">
+		<value>Spiel T�glich, mehr zu verdienen.</value>
+	</data>
+	<data name="Menu.Diamonds" xml:space="preserve">
+		<value>Diamantlager</value>
+	</data>
+	<data name="Menu.EraseBot" xml:space="preserve">
+		<value>Spieldaten</value>
+	</data>
+	<data name="Menu.EraseTop" xml:space="preserve">
+		<value>alles l�schen</value>
+	</data>
+	<data name="Menu.Failed" xml:space="preserve">
+		<value>Anzeige fehlgeschlagen</value>
+	</data>
+	<data name="Menu.Games" xml:space="preserve">
+		<value>Mehr Spiele</value>
+	</data>
+	<data name="Menu.Leaderboards" xml:space="preserve">
+		<value>Leaderboards</value>
+	</data>
+	<data name="Menu.Loading" xml:space="preserve">
+		<value>Beladung</value>
+	</data>
+	<data name="Menu.LogoBot" xml:space="preserve">
+		<value>Angriff von Oni</value>
+	</data>
+	<data name="Menu.LogoTop" xml:space="preserve">
+		<value>Ninja Warfare:</value>
+	</data>
+	<data name="Menu.MostPopular" xml:space="preserve">
+		<value>am beliebtesten</value>
+	</data>
+	<data name="Menu.No" xml:space="preserve">
+		<value>nein</value>
+	</data>
+	<data name="Menu.NoMoreAds" xml:space="preserve">
+		<value>Noch keine Anzeigen mehr</value>
+	</data>
+	<data name="Menu.Options" xml:space="preserve">
+		<value>Optionen</value>
+	</data>
+	<data name="Menu.Play" xml:space="preserve">
+		<value>Spielen</value>
+	</data>
+	<data name="Menu.QuitBot" xml:space="preserve">
+		<value>Wieder zu beenden</value>
+	</data>
+	<data name="Menu.QuitTop" xml:space="preserve">
+		<value>Zur�ck dr�cken</value>
+	</data>
+	<data name="Menu.Reset" xml:space="preserve">
+		<value>Daten zur�cksetzen</value>
+	</data>
+	<data name="Menu.ResetBot" xml:space="preserve">
+		<value>Sicher?</value>
+	</data>
+	<data name="Menu.ResetTop" xml:space="preserve">
+		<value>Bist du</value>
+	</data>
+	<data name="Menu.Skipped" xml:space="preserve">
+		<value>Anzeige �bersprungen</value>
+	</data>
+	<data name="Menu.SoundOff" xml:space="preserve">
+		<value>Ton aus</value>
+	</data>
+	<data name="Menu.SoundOn" xml:space="preserve">
+		<value>Ton an</value>
+	</data>
+	<data name="Menu.Upgrades" xml:space="preserve">
+		<value>Aktualisierung</value>
+	</data>
+	<data name="Menu.Yes" xml:space="preserve">
+		<value>Ja</value>
+	</data>
+	<data name="Results.BonusScore" xml:space="preserve">
+		<value>Bonus Score:</value>
+	</data>
+	<data name="Results.BonusSkill" xml:space="preserve">
+		<value>Bonus-F�higkeit:</value>
+	</data>
+	<data name="Results.EveryBot" xml:space="preserve">
+		<value>Verdienen Sie f�nf Diamanten</value>
+	</data>
+	<data name="Results.EveryTop" xml:space="preserve">
+		<value>Teilen Sie eine Wiederholung</value>
+	</data>
+	<data name="Results.RateBot" xml:space="preserve">
+		<value>Verdienen Sie zehn Diamanten</value>
+	</data>
+	<data name="Results.RateTop" xml:space="preserve">
+		<value>Bewerte das Spiel</value>
+	</data>
+	<data name="Results.RateUs" xml:space="preserve">
+		<value>Bewerten Sie uns</value>
+	</data>
+	<data name="Results.Thanks" xml:space="preserve">
+		<value>Vielen Dank</value>
+	</data>
+	<data name="Results.TotalScore" xml:space="preserve">
+		<value>Gesamtpunktzahl:</value>
+	</data>
+	<data name="Results.TotalSkill" xml:space="preserve">
+		<value>Gesamtfertigkeit:</value>
+	</data>
+	<data name="Upgrades.Attack" xml:space="preserve">
+		<value>Attacke:</value>
+	</data>
+	<data name="Upgrades.Buy" xml:space="preserve">
+		<value>Kaufen</value>
+	</data>
+	<data name="Upgrades.ChainSickle" xml:space="preserve">
+		<value>Kette und Sichel</value>
+	</data>
+	<data name="Upgrades.CoinMiner" xml:space="preserve">
+		<value>M�nzenbergmann</value>
+	</data>
+	<data name="Upgrades.DiamondsNeeded" xml:space="preserve">
+		<value>Diamanten brauchen, um zu entsperren</value>
+	</data>
+	<data name="Upgrades.DoYouWant" xml:space="preserve">
+		<value>M�chten Sie mehr kaufen?</value>
+	</data>
+	<data name="Upgrades.HandClaws" xml:space="preserve">
+		<value>Handklauen</value>
+	</data>
+	<data name="Upgrades.HP" xml:space="preserve">
+		<value>HP:</value>
+	</data>
+	<data name="Upgrades.Locked" xml:space="preserve">
+		<value>Eingesperrt</value>
+	</data>
+	<data name="Upgrades.LongBow" xml:space="preserve">
+		<value>Langbogen</value>
+	</data>
+	<data name="Upgrades.MaxLevel" xml:space="preserve">
+		<value>Maximales Level erreicht</value>
+	</data>
+	<data name="Upgrades.NinjaTree" xml:space="preserve">
+		<value>Abk�hlen</value>
+	</data>
+	<data name="Upgrades.NotEnoughDiamonds" xml:space="preserve">
+		<value>Nicht gen�gend Diamanten</value>
+	</data>
+	<data name="Upgrades.NotEnoughSkill" xml:space="preserve">
+		<value>Nicht genug Geschick</value>
+	</data>
+	<data name="Upgrades.Nunchuck" xml:space="preserve">
+		<value>Nunchuck</value>
+	</data>
+	<data name="Upgrades.OutOf" xml:space="preserve">
+		<value>au�er Betrieb</value>
+	</data>
+	<data name="Upgrades.PickSomething" xml:space="preserve">
+		<value>W�hle etwas</value>
+	</data>
+	<data name="Upgrades.Refinement" xml:space="preserve">
+		<value>Verfeinerung Upgrade</value>
+	</data>
+	<data name="Upgrades.Refining" xml:space="preserve">
+		<value>M�nzenveredelung</value>
+	</data>
+	<data name="Upgrades.Sai" xml:space="preserve">
+		<value>Sai</value>
+	</data>
+	<data name="Upgrades.SkillNeeded" xml:space="preserve">
+		<value>Fertigkeit ben�tigt:</value>
+	</data>
+	<data name="Upgrades.SpeedUpgrade" xml:space="preserve">
+		<value>Geschwindigkeitssteigerung</value>
+	</data>
+	<data name="Upgrades.StoneWall" xml:space="preserve">
+		<value>Steinwand</value>
+	</data>
+	<data name="Upgrades.Sword" xml:space="preserve">
+		<value>Schwert</value>
+	</data>
+	<data name="Upgrades.Throwing" xml:space="preserve">
+		<value>Wurf Sterne</value>
+	</data>
+	<data name="Upgrades.Tutorial11" xml:space="preserve">
+		<value>Dies ist die Upgrades</value>
+	</data>
+	<data name="Upgrades.Tutorial12" xml:space="preserve">
+		<value>Bildschirm</value>
+	</data>
+	<data name="Upgrades.Tutorial21" xml:space="preserve">
+		<value>Jetzt aktualisieren Sie Ihr Schwert</value>
+	</data>
+	<data name="Upgrades.Tutorial22" xml:space="preserve">
+		<value>Ninja durch Auswahl der</value>
+	</data>
+	<data name="Upgrades.Tutorial23" xml:space="preserve">
+		<value>Knopf und Klopfen</value>
+	</data>
+	<data name="Upgrades.Tutorial24" xml:space="preserve">
+		<value>'Aktualisierung'</value>
+	</data>
+	<data name="Upgrades.Tutorial31" xml:space="preserve">
+		<value>Gro�! Nun, das ist genug</value>
+	</data>
+	<data name="Upgrades.Tutorial32" xml:space="preserve">
+		<value>Lehre f�r mich heute</value>
+	</data>
+	<data name="Upgrades.Tutorial33" xml:space="preserve">
+		<value>Viel Gl�ck da drau�en</value>
+	</data>
+	<data name="Upgrades.Unlocked" xml:space="preserve">
+		<value>Freigeschaltet</value>
+	</data>
+	<data name="Upgrades.WoodStaff" xml:space="preserve">
+		<value>Holzstab</value>
+	</data>
+</root>

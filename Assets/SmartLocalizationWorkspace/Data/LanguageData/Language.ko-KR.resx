@@ -230,6 +230,27 @@
 	<data name="Game.Win" xml:space="preserve">
 		<value>당신은 원!</value>
 	</data>
+	<data name="InApp.Best" xml:space="preserve">
+		<value>최고의 가치</value>
+	</data>
+	<data name="InApp.Hundred" xml:space="preserve">
+		<value>125 다이아몬드</value>
+	</data>
+	<data name="InApp.Most" xml:space="preserve">
+		<value>가장 인기 많은</value>
+	</data>
+	<data name="InApp.Ten" xml:space="preserve">
+		<value>10 다이아몬드</value>
+	</data>
+	<data name="InApp.Thirty" xml:space="preserve">
+		<value>30 다이아몬드</value>
+	</data>
+	<data name="InApp.Three" xml:space="preserve">
+		<value>300 다이아몬드</value>
+	</data>
+	<data name="InApp.Title" xml:space="preserve">
+		<value>구매 다이아몬드</value>
+	</data>
 	<data name="Menu.10Diamonds" xml:space="preserve">
 		<value>(10) 다이아몬드</value>
 	</data>
@@ -249,10 +270,10 @@
 		<value>무료 다이아몬드 수상</value>
 	</data>
 	<data name="Menu.Back" xml:space="preserve">
-		<value>다시</value>
+		<value>뒤로</value>
 	</data>
 	<data name="Menu.BestValue" xml:space="preserve">
-		<value>최고의 가치</value>
+		<value>최고의 가치</value>
 	</data>
 	<data name="Menu.Cleared" xml:space="preserve">
 		<value>게임 해제</value>
@@ -309,7 +330,7 @@
 		<value>닌자 전쟁 :</value>
 	</data>
 	<data name="Menu.MostPopular" xml:space="preserve">
-		<value>가장 인기 많은</value>
+		<value>가장 인기 많은</value>
 	</data>
 	<data name="Menu.No" xml:space="preserve">
 		<value>없음</value>
@@ -398,6 +419,9 @@
 	<data name="Upgrades.DiamondsNeeded" xml:space="preserve">
 		<value>다이아몬드의 잠금을 해제 할 필요가 있었다.</value>
 	</data>
+	<data name="Upgrades.DoYouWant" xml:space="preserve">
+		<value>더 살고 싶니?</value>
+	</data>
 	<data name="Upgrades.HandClaws" xml:space="preserve">
 		<value>손 발톱</value>
 	</data>
@@ -414,8 +438,7 @@
 		<value>최대 수준에 도달</value>
 	</data>
 	<data name="Upgrades.NinjaTree" xml:space="preserve">
-		<value>재사용 대기 시간
-</value>
+		<value>재사용 대기 시간</value>
 	</data>
 	<data name="Upgrades.NotEnoughDiamonds" xml:space="preserve">
 		<value>충분하지 다이아몬드</value>

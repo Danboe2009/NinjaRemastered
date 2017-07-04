@@ -230,6 +230,27 @@
 	<data name="Game.Win" xml:space="preserve">
 		<value>You Won!</value>
 	</data>
+	<data name="InApp.Best" xml:space="preserve">
+		<value>Best Value</value>
+	</data>
+	<data name="InApp.Hundred" xml:space="preserve">
+		<value>125 Diamonds</value>
+	</data>
+	<data name="InApp.Most" xml:space="preserve">
+		<value>Most Popular</value>
+	</data>
+	<data name="InApp.Ten" xml:space="preserve">
+		<value>10 Diamonds</value>
+	</data>
+	<data name="InApp.Thirty" xml:space="preserve">
+		<value>30 Diamonds</value>
+	</data>
+	<data name="InApp.Three" xml:space="preserve">
+		<value>300 Diamonds</value>
+	</data>
+	<data name="InApp.Title" xml:space="preserve">
+		<value>Purchase Diamonds</value>
+	</data>
 	<data name="Menu.10Diamonds" xml:space="preserve">
 		<value>10 Diamonds</value>
 	</data>
@@ -397,6 +418,9 @@
 	</data>
 	<data name="Upgrades.DiamondsNeeded" xml:space="preserve">
 		<value>Diamonds Needed to Unlock.</value>
+	</data>
+	<data name="Upgrades.DoYouWant" xml:space="preserve">
+		<value>Do you want to buy more?</value>
 	</data>
 	<data name="Upgrades.HandClaws" xml:space="preserve">
 		<value>Hand Claws</value>

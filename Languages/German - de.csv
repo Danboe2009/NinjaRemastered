@@ -1,0 +1,132 @@
+Game.Coins,Münzen:
+Game.Continue,Fortsetzen
+Game.Diamonds,Diamanten:
+Game.Level,Stufe:
+Game.Lose,Du hast verloren!
+Game.Menu,Menü
+Game.MoveBot,um dich zu bewegen
+Game.MoveTop,"Berühre hier,"
+Game.Pause,Das Spiel ist pausiert
+Game.Score,Ergebnis:
+Game.Skill,Fähigkeit
+Game.Tutorial11,"Hallo, Willkommen in Ninja"
+Game.Tutorial12,Krieg. Ich bin Sensei Lien.
+Game.Tutorial13,Lass uns dein Training beginnen!
+Game.Tutorial21,Blättern Sie durch den Bildschirm
+Game.Tutorial22,Rechts drücken oder
+Game.Tutorial23,Linke Seite des Bildschirms
+Game.Tutorial31,Das ist der Ninja-Baum.
+Game.Tutorial32,Die Oni versuchen zu
+Game.Tutorial33,zerstöre es.
+Game.Tutorial41,Verteidige es durch die Einstellung
+Game.Tutorial42,Ninjas! Tippen Sie auf die Ninja
+Game.Tutorial43,"Icon, um ein ninja zu entsenden."
+Game.Tutorial51,"Besiege Oni, um Münzen zu gewinnen!"
+Game.Tutorial52,Tippen Sie auf die Münze
+Game.Tutorial53,sammle es ein.
+Game.Tutorial61,Zerstöre das Oni Portal
+Game.Tutorial62,Um das Level zu vervollständigen.
+Game.Tutorial71,Komplette Levels zu
+Game.Tutorial72,Sichern die verlorenen
+Game.Tutorial73,Diamanten.
+Game.Tutorial81,Diamanten können verwendet werden
+Game.Tutorial82,Neu kaufen
+Game.Tutorial83,Einheiten.
+Game.Tutorial91,"Beginnen, ein neues zu erwerben"
+Game.Tutorial92,Einheit mit diesem Diamanten.
+Game.Upgrade,Aktualisierung
+Game.Win,Du hast gewonnen!
+InApp.Best,Bester Wert
+InApp.Hundred,125 Diamanten
+InApp.Most,Am beliebtesten
+InApp.Ten,10 Diamanten
+InApp.Thirty,30 Diamanten
+InApp.Three,300 Diamanten
+InApp.Title,Diamanten kaufen
+Menu.10Diamonds,10 Diamanten
+Menu.125Diamonds,125 Diamanten
+Menu.300Diamonds,300 Diamanten
+Menu.30Diamonds,30 Diamanten
+Menu.Achievements,Errungenschaften
+Menu.Awarded,Free Diamond Ausgezeichnet
+Menu.Back,Zurück
+Menu.BestValue,Bester Wert
+Menu.Cleared,Spiel gelöscht
+Menu.Connected,In Verbindung bleiben!
+Menu.Credits,kredite
+Menu.Daily1,Tag 1
+Menu.Daily2,Tag 2
+Menu.Daily3,Tag 3
+Menu.Daily4,Tag 4
+Menu.Daily5,Tag 5
+Menu.Daily6,"Spiel Täglich, mehr zu verdienen."
+Menu.Diamonds,Diamantlager
+Menu.EraseBot,Spieldaten
+Menu.EraseTop,alles löschen
+Menu.Failed,Anzeige fehlgeschlagen
+Menu.Games,Mehr Spiele
+Menu.Leaderboards,Leaderboards
+Menu.Loading,Beladung
+Menu.LogoBot,Angriff von Oni
+Menu.LogoTop,Ninja Warfare:
+Menu.MostPopular,am beliebtesten
+Menu.No,nein
+Menu.NoMoreAds,Noch keine Anzeigen mehr
+Menu.Options,Optionen
+Menu.Play,Spielen
+Menu.QuitBot,Wieder zu beenden
+Menu.QuitTop,Zurück drücken
+Menu.Reset,Daten zurücksetzen
+Menu.ResetBot,Sicher?
+Menu.ResetTop,Bist du
+Menu.Skipped,Anzeige übersprungen
+Menu.SoundOff,Ton aus
+Menu.SoundOn,Ton an
+Menu.Upgrades,Aktualisierung
+Menu.Yes,Ja
+Results.BonusScore,Bonus Score:
+Results.BonusSkill,Bonus-Fähigkeit:
+Results.EveryBot,Verdienen Sie fünf Diamanten
+Results.EveryTop,Teilen Sie eine Wiederholung
+Results.RateBot,Verdienen Sie zehn Diamanten
+Results.RateTop,Bewerte das Spiel
+Results.RateUs,Bewerten Sie uns
+Results.Thanks,Vielen Dank
+Results.TotalScore,Gesamtpunktzahl:
+Results.TotalSkill,Gesamtfertigkeit:
+Upgrades.Attack,Attacke:
+Upgrades.Buy,Kaufen
+Upgrades.ChainSickle,Kette und Sichel
+Upgrades.CoinMiner,Münzenbergmann
+Upgrades.DiamondsNeeded,"Diamanten brauchen, um zu entsperren"
+Upgrades.DoYouWant,Möchten Sie mehr kaufen?
+Upgrades.HandClaws,Handklauen
+Upgrades.HP,HP:
+Upgrades.Locked,Eingesperrt
+Upgrades.LongBow,Langbogen
+Upgrades.MaxLevel,Maximales Level erreicht
+Upgrades.NinjaTree,Abkühlen
+Upgrades.NotEnoughDiamonds,Nicht genügend Diamanten
+Upgrades.NotEnoughSkill,Nicht genug Geschick
+Upgrades.Nunchuck,Nunchuck
+Upgrades.OutOf,außer Betrieb
+Upgrades.PickSomething,Wähle etwas
+Upgrades.Refinement,Verfeinerung Upgrade
+Upgrades.Refining,Münzenveredelung
+Upgrades.Sai,Sai
+Upgrades.SkillNeeded,Fertigkeit benötigt:
+Upgrades.SpeedUpgrade,Geschwindigkeitssteigerung
+Upgrades.StoneWall,Steinwand
+Upgrades.Sword,Schwert
+Upgrades.Throwing,Wurf Sterne
+Upgrades.Tutorial11,Dies ist die Upgrades
+Upgrades.Tutorial12,Bildschirm
+Upgrades.Tutorial21,Jetzt aktualisieren Sie Ihr Schwert
+Upgrades.Tutorial22,Ninja durch Auswahl der
+Upgrades.Tutorial23,Knopf und Klopfen
+Upgrades.Tutorial24,'Aktualisierung'
+Upgrades.Tutorial31,"Groß! Nun, das ist genug"
+Upgrades.Tutorial32,Lehre für mich heute
+Upgrades.Tutorial33,Viel Glück da draußen
+Upgrades.Unlocked,Freigeschaltet
+Upgrades.WoodStaff,Holzstab

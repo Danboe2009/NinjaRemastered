@@ -3,6 +3,12 @@
   <version>0</version>
   <CultureInfos>
     <CultureInfo>
+      <languageCode>de</languageCode>
+      <englishName>German</englishName>
+      <nativeName>Deutsch</nativeName>
+      <isRightToLeft>false</isRightToLeft>
+    </CultureInfo>
+    <CultureInfo>
       <languageCode>en</languageCode>
       <englishName>English</englishName>
       <nativeName>English</nativeName>
@@ -27,9 +33,21 @@
       <isRightToLeft>false</isRightToLeft>
     </CultureInfo>
     <CultureInfo>
+      <languageCode>ja-JP</languageCode>
+      <englishName>Japanese (Japan)</englishName>
+      <nativeName>日本語 (日本)</nativeName>
+      <isRightToLeft>false</isRightToLeft>
+    </CultureInfo>
+    <CultureInfo>
       <languageCode>ko-KR</languageCode>
       <englishName>Korean (South Korea)</englishName>
       <nativeName>한국어 (대한민국)</nativeName>
+      <isRightToLeft>false</isRightToLeft>
+    </CultureInfo>
+    <CultureInfo>
+      <languageCode>zh-CN</languageCode>
+      <englishName>Chinese (China)</englishName>
+      <nativeName>中文 (中国)</nativeName>
       <isRightToLeft>false</isRightToLeft>
     </CultureInfo>
   </CultureInfos>

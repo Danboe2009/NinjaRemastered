@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root><!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+	<data name="Game.Coins" xml:space="preserve">
+		<value>硬币：</value>
+	</data>
+	<data name="Game.Continue" xml:space="preserve">
+		<value>继续</value>
+	</data>
+	<data name="Game.Diamonds" xml:space="preserve">
+		<value>钻石：</value>
+	</data>
+	<data name="Game.Level" xml:space="preserve">
+		<value>层:</value>
+	</data>
+	<data name="Game.Lose" xml:space="preserve">
+		<value>你输了：</value>
+	</data>
+	<data name="Game.Menu" xml:space="preserve">
+		<value>菜单</value>
+	</data>
+	<data name="Game.MoveBot" xml:space="preserve">
+		<value>移动</value>
+	</data>
+	<data name="Game.MoveTop" xml:space="preserve">
+		<value>触摸这里</value>
+	</data>
+	<data name="Game.Pause" xml:space="preserve">
+		<value>游戏暂停</value>
+	</data>
+	<data name="Game.Score" xml:space="preserve">
+		<value>得分了：</value>
+	</data>
+	<data name="Game.Skill" xml:space="preserve">
+		<value>技能：</value>
+	</data>
+	<data name="Game.Tutorial11" xml:space="preserve">
+		<value>嗨，欢迎来到忍者</value>
+	</data>
+	<data name="Game.Tutorial12" xml:space="preserve">
+		<value>战争。 我是老连连</value>
+	</data>
+	<data name="Game.Tutorial13" xml:space="preserve">
+		<value>让我们开始你的训练！</value>
+	</data>
+	<data name="Game.Tutorial21" xml:space="preserve">
+		<value>滚动屏幕</value>
+	</data>
+	<data name="Game.Tutorial22" xml:space="preserve">
+		<value>按右边或</value>
+	</data>
+	<data name="Game.Tutorial23" xml:space="preserve">
+		<value>屏幕左侧。</value>
+	</data>
+	<data name="Game.Tutorial31" xml:space="preserve">
+		<value>这是忍者树。</value>
+	</data>
+	<data name="Game.Tutorial32" xml:space="preserve">
+		<value>Oni正在努力</value>
+	</data>
+	<data name="Game.Tutorial33" xml:space="preserve">
+		<value>摧毁它</value>
+	</data>
+	<data name="Game.Tutorial41" xml:space="preserve">
+		<value>通过招聘来保卫</value>
+	</data>
+	<data name="Game.Tutorial42" xml:space="preserve">
+		<value>忍者！ 点击忍者</value>
+	</data>
+	<data name="Game.Tutorial43" xml:space="preserve">
+		<value>图标部署忍者。</value>
+	</data>
+	<data name="Game.Tutorial51" xml:space="preserve">
+		<value>打败奥尼赢得硬币！</value>
+	</data>
+	<data name="Game.Tutorial52" xml:space="preserve">
+		<value>点击硬币</value>
+	</data>
+	<data name="Game.Tutorial53" xml:space="preserve">
+		<value>收集它</value>
+	</data>
+	<data name="Game.Tutorial61" xml:space="preserve">
+		<value>破坏Oni门户</value>
+	</data>
+	<data name="Game.Tutorial62" xml:space="preserve">
+		<value>完成水平。</value>
+	</data>
+	<data name="Game.Tutorial71" xml:space="preserve">
+		<value>完整级别</value>
+	</data>
+	<data name="Game.Tutorial72" xml:space="preserve">
+		<value>确保失物</value>
+	</data>
+	<data name="Game.Tutorial73" xml:space="preserve">
+		<value>钻石</value>
+	</data>
+	<data name="Game.Tutorial81" xml:space="preserve">
+		<value>可以使用钻石</value>
+	</data>
+	<data name="Game.Tutorial82" xml:space="preserve">
+		<value>购买新的</value>
+	</data>
+	<data name="Game.Tutorial83" xml:space="preserve">
+		<value>单位。</value>
+	</data>
+	<data name="Game.Tutorial91" xml:space="preserve">
+		<value>开始赚取新的</value>
+	</data>
+	<data name="Game.Tutorial92" xml:space="preserve">
+		<value>单位与这颗钻石。</value>
+	</data>
+	<data name="Game.Upgrade" xml:space="preserve">
+		<value>升级</value>
+	</data>
+	<data name="Game.Win" xml:space="preserve">
+		<value>你赢了！</value>
+	</data>
+	<data name="InApp.Best" xml:space="preserve">
+		<value>最超值</value>
+	</data>
+	<data name="InApp.Hundred" xml:space="preserve">
+		<value>125钻石</value>
+	</data>
+	<data name="InApp.Most" xml:space="preserve">
+		<value>最受欢迎</value>
+	</data>
+	<data name="InApp.Ten" xml:space="preserve">
+		<value>10钻石</value>
+	</data>
+	<data name="InApp.Thirty" xml:space="preserve">
+		<value>30钻石</value>
+	</data>
+	<data name="InApp.Three" xml:space="preserve">
+		<value>300钻石</value>
+	</data>
+	<data name="InApp.Title" xml:space="preserve">
+		<value>购买钻石</value>
+	</data>
+	<data name="Menu.10Diamonds" xml:space="preserve">
+		<value>10钻石</value>
+	</data>
+	<data name="Menu.125Diamonds" xml:space="preserve">
+		<value>125钻石</value>
+	</data>
+	<data name="Menu.300Diamonds" xml:space="preserve">
+		<value>300钻石</value>
+	</data>
+	<data name="Menu.30Diamonds" xml:space="preserve">
+		<value>30钻石</value>
+	</data>
+	<data name="Menu.Achievements" xml:space="preserve">
+		<value>成就</value>
+	</data>
+	<data name="Menu.Awarded" xml:space="preserve">
+		<value>免费钻石奖</value>
+	</data>
+	<data name="Menu.Back" xml:space="preserve">
+		<value>背部</value>
+	</data>
+	<data name="Menu.BestValue" xml:space="preserve">
+		<value>最超值</value>
+	</data>
+	<data name="Menu.Cleared" xml:space="preserve">
+		<value>游戏清除</value>
+	</data>
+	<data name="Menu.Connected" xml:space="preserve">
+		<value>保持联系</value>
+	</data>
+	<data name="Menu.Credits" xml:space="preserve">
+		<value>积分</value>
+	</data>
+	<data name="Menu.Daily1" xml:space="preserve">
+		<value>第1天</value>
+	</data>
+	<data name="Menu.Daily2" xml:space="preserve">
+		<value>第2天</value>
+	</data>
+	<data name="Menu.Daily3" xml:space="preserve">
+		<value>第3天</value>
+	</data>
+	<data name="Menu.Daily4" xml:space="preserve">
+		<value>第4天</value>
+	</data>
+	<data name="Menu.Daily5" xml:space="preserve">
+		<value>第5天</value>
+	</data>
+	<data name="Menu.Daily6" xml:space="preserve">
+		<value>每天玩，赚更多。</value>
+	</data>
+	<data name="Menu.Diamonds" xml:space="preserve">
+		<value>钻石店</value>
+	</data>
+	<data name="Menu.EraseBot" xml:space="preserve">
+		<value>游戏数据</value>
+	</data>
+	<data name="Menu.EraseTop" xml:space="preserve">
+		<value>全部擦除</value>
+	</data>
+	<data name="Menu.Failed" xml:space="preserve">
+		<value>广告失败</value>
+	</data>
+	<data name="Menu.Games" xml:space="preserve">
+		<value>更多游戏</value>
+	</data>
+	<data name="Menu.Leaderboards" xml:space="preserve">
+		<value>排行榜</value>
+	</data>
+	<data name="Menu.Loading" xml:space="preserve">
+		<value>载入中</value>
+	</data>
+	<data name="Menu.LogoBot" xml:space="preserve">
+		<value>攻击Oni</value>
+	</data>
+	<data name="Menu.LogoTop" xml:space="preserve">
+		<value>忍者战：</value>
+	</data>
+	<data name="Menu.MostPopular" xml:space="preserve">
+		<value>最受欢迎</value>
+	</data>
+	<data name="Menu.No" xml:space="preserve">
+		<value>没有</value>
+	</data>
+	<data name="Menu.NoMoreAds" xml:space="preserve">
+		<value>今天没有更多广告</value>
+	</data>
+	<data name="Menu.Options" xml:space="preserve">
+		<value>选项</value>
+	</data>
+	<data name="Menu.Play" xml:space="preserve">
+		<value>玩</value>
+	</data>
+	<data name="Menu.QuitBot" xml:space="preserve">
+		<value>再次退出</value>
+	</data>
+	<data name="Menu.QuitTop" xml:space="preserve">
+		<value>按回来</value>
+	</data>
+	<data name="Menu.Reset" xml:space="preserve">
+		<value>复位数据</value>
+	</data>
+	<data name="Menu.ResetBot" xml:space="preserve">
+		<value>当然？</value>
+	</data>
+	<data name="Menu.ResetTop" xml:space="preserve">
+		<value>你是</value>
+	</data>
+	<data name="Menu.Skipped" xml:space="preserve">
+		<value>广告已跳过</value>
+	</data>
+	<data name="Menu.SoundOff" xml:space="preserve">
+		<value>声音关闭</value>
+	</data>
+	<data name="Menu.SoundOn" xml:space="preserve">
+		<value>声音开</value>
+	</data>
+	<data name="Menu.Upgrades" xml:space="preserve">
+		<value>升级</value>
+	</data>
+	<data name="Menu.Yes" xml:space="preserve">
+		<value>是</value>
+	</data>
+	<data name="Results.BonusScore" xml:space="preserve">
+		<value>奖金积分：</value>
+	</data>
+	<data name="Results.BonusSkill" xml:space="preserve">
+		<value>奖金技能：</value>
+	</data>
+	<data name="Results.EveryBot" xml:space="preserve">
+		<value>赚五钻</value>
+	</data>
+	<data name="Results.EveryTop" xml:space="preserve">
+		<value>分享重播</value>
+	</data>
+	<data name="Results.RateBot" xml:space="preserve">
+		<value>赚取十颗钻石</value>
+	</data>
+	<data name="Results.RateTop" xml:space="preserve">
+		<value>评价游戏</value>
+	</data>
+	<data name="Results.RateUs" xml:space="preserve">
+		<value>给我们评分</value>
+	</data>
+	<data name="Results.Thanks" xml:space="preserve">
+		<value>谢谢</value>
+	</data>
+	<data name="Results.TotalScore" xml:space="preserve">
+		<value>总得分：</value>
+	</data>
+	<data name="Results.TotalSkill" xml:space="preserve">
+		<value>总技能：</value>
+	</data>
+	<data name="Upgrades.Attack" xml:space="preserve">
+		<value>攻击：</value>
+	</data>
+	<data name="Upgrades.Buy" xml:space="preserve">
+		<value>购买</value>
+	</data>
+	<data name="Upgrades.ChainSickle" xml:space="preserve">
+		<value>链和镰刀</value>
+	</data>
+	<data name="Upgrades.CoinMiner" xml:space="preserve">
+		<value>硬币矿工</value>
+	</data>
+	<data name="Upgrades.DiamondsNeeded" xml:space="preserve">
+		<value>钻石需要解锁</value>
+	</data>
+	<data name="Upgrades.DoYouWant" xml:space="preserve">
+		<value>你想买更多吗？</value>
+	</data>
+	<data name="Upgrades.HandClaws" xml:space="preserve">
+		<value>手爪</value>
+	</data>
+	<data name="Upgrades.HP" xml:space="preserve">
+		<value>生命值：</value>
+	</data>
+	<data name="Upgrades.Locked" xml:space="preserve">
+		<value>锁定</value>
+	</data>
+	<data name="Upgrades.LongBow" xml:space="preserve">
+		<value>长弓</value>
+	</data>
+	<data name="Upgrades.MaxLevel" xml:space="preserve">
+		<value>最大等级达到</value>
+	</data>
+	<data name="Upgrades.NinjaTree" xml:space="preserve">
+		<value>冷却</value>
+	</data>
+	<data name="Upgrades.NotEnoughDiamonds" xml:space="preserve">
+		<value>没有足够的钻石</value>
+	</data>
+	<data name="Upgrades.NotEnoughSkill" xml:space="preserve">
+		<value>没有足够的技能</value>
+	</data>
+	<data name="Upgrades.Nunchuck" xml:space="preserve">
+		<value>双节棍</value>
+	</data>
+	<data name="Upgrades.OutOf" xml:space="preserve">
+		<value>暂停服务</value>
+	</data>
+	<data name="Upgrades.PickSomething" xml:space="preserve">
+		<value>选择东西</value>
+	</data>
+	<data name="Upgrades.Refinement" xml:space="preserve">
+		<value>细化升级</value>
+	</data>
+	<data name="Upgrades.Refining" xml:space="preserve">
+		<value>硬币精炼</value>
+	</data>
+	<data name="Upgrades.Sai" xml:space="preserve">
+		<value>西</value>
+	</data>
+	<data name="Upgrades.SkillNeeded" xml:space="preserve">
+		<value>需要的技能：</value>
+	</data>
+	<data name="Upgrades.SpeedUpgrade" xml:space="preserve">
+		<value>速度升级</value>
+	</data>
+	<data name="Upgrades.StoneWall" xml:space="preserve">
+		<value>石墙</value>
+	</data>
+	<data name="Upgrades.Sword" xml:space="preserve">
+		<value>剑</value>
+	</data>
+	<data name="Upgrades.Throwing" xml:space="preserve">
+		<value>投掷星星</value>
+	</data>
+	<data name="Upgrades.Tutorial11" xml:space="preserve">
+		<value>这是升级</value>
+	</data>
+	<data name="Upgrades.Tutorial12" xml:space="preserve">
+		<value>屏幕</value>
+	</data>
+	<data name="Upgrades.Tutorial21" xml:space="preserve">
+		<value>现在升级你的剑</value>
+	</data>
+	<data name="Upgrades.Tutorial22" xml:space="preserve">
+		<value>忍者通过选择</value>
+	</data>
+	<data name="Upgrades.Tutorial23" xml:space="preserve">
+		<value>按钮和点击</value>
+	</data>
+	<data name="Upgrades.Tutorial24" xml:space="preserve">
+		<value>'升级'。</value>
+	</data>
+	<data name="Upgrades.Tutorial31" xml:space="preserve">
+		<value>大！ 那就够了</value>
+	</data>
+	<data name="Upgrades.Tutorial32" xml:space="preserve">
+		<value>今天教我</value>
+	</data>
+	<data name="Upgrades.Tutorial33" xml:space="preserve">
+		<value>祝你好运。</value>
+	</data>
+	<data name="Upgrades.Unlocked" xml:space="preserve">
+		<value>解锁</value>
+	</data>
+	<data name="Upgrades.WoodStaff" xml:space="preserve">
+		<value>木工</value>
+	</data>
+</root>

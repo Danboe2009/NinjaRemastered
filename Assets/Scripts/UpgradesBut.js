@@ -14,6 +14,8 @@ private var Ready : boolean;
 private var Box : GameObject;
 private var Mess : TextMesh;
 private var TextM : TextMesh;
+static var DisableStore : boolean;
+
 
 private var Unit1LVL : int;
 private var Unit2LVL : int;
@@ -31,6 +33,11 @@ function Start ()
 	Diamo = PlayerPrefs.GetInt("Diamonds");
 	Sound = PlayerPrefs.GetInt("Sound");
 	Skill = PlayerPrefs.GetInt("TotalSkill");
+
+	if(PlayerPrefs.GetInt("UTutorial") == 0 && PlayerPrefs.GetInt("Level") == 2)
+	{
+		DisableStore = true;
+	}
 	
 	Ready = true;
 }
@@ -38,6 +45,7 @@ function Start ()
 function Update () 
 {
 	Debug.Log("InApp " + Variables.InAppO);
+	Debug.Log("DisableStore" + DisableStore);
 	Unit1LVL = PlayerPrefs.GetInt("Unit1Level");
 	Unit2LVL = PlayerPrefs.GetInt("Unit2Level");
 	Unit3LVL = PlayerPrefs.GetInt("Unit3Level");
@@ -1270,8 +1278,10 @@ function Update ()
 
 function InApp()
 {
-	//ClearScreen(UpgradesLanguage.thisLanguageManager.GetTextValue("Upgrades.NotEnoughDiamonds"));
-	Instantiate(Resources.Load("OutOfDiamonds"),Vector3(0,5.2,0),Quaternion.Euler(90,0,0));
+	if(!DisableStore){
+		//ClearScreen(UpgradesLanguage.thisLanguageManager.GetTextValue("Upgrades.NotEnoughDiamonds"));
+		Instantiate(Resources.Load("OutOfDiamonds"),Vector3(0,5.2,0),Quaternion.Euler(90,0,0));
+	}
 }
 
 function Buy(Cost : int)
