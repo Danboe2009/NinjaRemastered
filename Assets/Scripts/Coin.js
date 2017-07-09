@@ -57,6 +57,10 @@ function Start ()
 
 function Update () 
 {
+	if(Type == "Diam")
+	{
+		Debug.Log("Moving :" + Moving);
+	}
 	var ray = Camera.main.ScreenPointToRay (Input.mousePosition);
     var hit : RaycastHit;
     
@@ -64,20 +68,32 @@ function Update ()
     {
     	if(Input.GetButtonDown("Fire1"))
        	{
-       		if(Sound)
-       		{
-       			AudioSource.PlayClipAtPoint(Ting, Camera.main.transform.position);
+       		if(Type == "Coin")
+			{
+				if(Sound)
+	       		{
+	       			AudioSource.PlayClipAtPoint(Ting, Camera.main.transform.position);
+	       		}
+	       		//Destroy(this.gameObject,0);
+	       		Moving = true;
+	       		
+	       		
+	       		PlayerPrefs.SetInt("TotalCoins",PlayerPrefs.GetInt("TotalCoins") + 1);
+	       		GPG.AchievementAndSoItBegans();
+	       		GPG.AchievementCoinCollector();
+	       		GPG.AchievementCoinoisseur();
+	       		GPG.AchievementMoneyHungry();
+	       		GPG.AchievementCoinVault();
        		}
-       		//Destroy(this.gameObject,0);
-       		Moving = true;
-       		
-       		
-       		PlayerPrefs.SetInt("TotalCoins",PlayerPrefs.GetInt("TotalCoins") + 1);
-       		GPG.AchievementAndSoItBegans();
-       		GPG.AchievementCoinCollector();
-       		GPG.AchievementCoinoisseur();
-       		GPG.AchievementMoneyHungry();
-       		GPG.AchievementCoinVault();
+       		if(Type == "Diam")
+			{
+				if(Sound)
+	       		{
+	       			AudioSource.PlayClipAtPoint(Ting, Camera.main.transform.position);
+	       		}
+	       		//Destroy(this.gameObject,0);
+	       		Moving = true;
+			}
        	}
     }
     if(this.transform.position.z > 13 || this.transform.position.z < -13)
