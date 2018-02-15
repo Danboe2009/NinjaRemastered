@@ -20,7 +20,7 @@ public class mono_gmail : MonoBehaviour
              
 		SmtpClient smtpServer = new SmtpClient ("smtp.gmail.com");
 		smtpServer.Port = 465;
-		smtpServer.Credentials = new System.Net.NetworkCredential ("missingcontroller@gmail.com", "Danad209");
+		//smtpServer.Credentials = new System.Net.NetworkCredential ("missingcontroller@gmail.com", "Danad209");
 		smtpServer.EnableSsl = true;
 		ServicePointManager.ServerCertificateValidationCallback = 
                  delegate(object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors) {

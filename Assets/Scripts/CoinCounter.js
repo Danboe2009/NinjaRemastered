@@ -12,6 +12,6 @@ function Start ()
 
 function Update () 
 {
-	CoinText.text = GameLanguage.thisLanguageManager.GetTextValue("Game.Coins") + " " + Variables.Coins.ToString("f0");
-	DiamText.text = GameLanguage.thisLanguageManager.GetTextValue("Game.Diamonds") + " " + Variables.Diamo.ToString("f0");
+	CoinText.text = Variables.Coins.ToString("f0"); //GameLanguage.thisLanguageManager.GetTextValue("Game.Coins") + " " + Variables.Coins.ToString("f0");
+	DiamText.text = Variables.Diamo.ToString("f0"); //GameLanguage.thisLanguageManager.GetTextValue("Game.Diamonds") + " " + Variables.Diamo.ToString("f0");
 }
