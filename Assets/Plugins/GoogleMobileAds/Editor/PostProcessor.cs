@@ -19,7 +19,7 @@ namespace GoogleMobileAds
             #if UNITY_5
                 iOSBuildTarget = BuildTarget.iOS;
             #else
-                iOSBuildTarget = BuildTarget.iOS;
+                iOSBuildTarget = BuildTarget.iPhone;
             #endif
 
             if (target == iOSBuildTarget)

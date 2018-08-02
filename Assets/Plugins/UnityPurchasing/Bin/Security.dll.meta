@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 282e7a4569d314342849ac78f7305a4a
-timeCreated: 1473188566
+guid: 3b26978bdb89a4d31bb9d29ce8b17be0
+timeCreated: 1456320429
 licenseType: Pro
 PluginImporter:
   serializedVersion: 1
@@ -13,7 +13,7 @@ PluginImporter:
       settings:
         CPU: AnyCPU
     Any:
-      enabled: 1
+      enabled: 0
       settings: {}
     Editor:
       enabled: 1
@@ -46,15 +46,9 @@ PluginImporter:
       settings:
         CPU: AnyCPU
     SamsungTV:
-      enabled: 1
+      enabled: 0
       settings:
         STV_MODEL: STANDARD_13
-    Tizen:
-      enabled: 1
-      settings: {}
-    WebGL:
-      enabled: 1
-      settings: {}
     Win:
       enabled: 1
       settings:
@@ -64,7 +58,7 @@ PluginImporter:
       settings:
         CPU: AnyCPU
     WindowsStoreApps:
-      enabled: 1
+      enabled: 0
       settings:
         CPU: AnyCPU
     iOS:
@@ -74,9 +68,7 @@ PluginImporter:
         FrameworkDependencies: 
     tvOS:
       enabled: 1
-      settings:
-        CompileFlags: 
-        FrameworkDependencies: 
+      settings: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
